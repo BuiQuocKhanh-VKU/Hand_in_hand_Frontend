@@ -9,19 +9,24 @@ import Header from "../containers/Header/Header";
 
 class System extends Component {
     render() {
-         const { systemMenuPath, isLoggedIn } = this.props;
+        const { systemMenuPath, isLoggedIn } = this.props;
         return (
-             <React.Fragment>
+            <React.Fragment>
                 {isLoggedIn && <Header />}
                 <div className="system-container" style={{ fontFamily: "Helvetica" }}>
                     <div className="system-list">
                         <Switch>
-                        
+                           
                             <Route
                                 path="/system/user-manage"
                                 component={userIsAdmin(UserManage)} // Sử dụng HOC
                             />
-                          
+                            
+                            <Route
+                                component={() => {
+                                    return <Redirect to={systemMenuPath} />;
+                                }}
+                            />
                         </Switch>
                     </div>
                 </div>
