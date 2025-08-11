@@ -8,3 +8,14 @@ export const setContentOfConfirmModal = (contentOfConfirmModal) => ({
     type: actionTypes.SET_CONTENT_OF_CONFIRM_MODAL,
     contentOfConfirmModal: contentOfConfirmModal
 });
+
+export const changeLanguageApp = (language) => ({
+    type: actionTypes.CHANGE_LANGUAGE,
+    language: language
+});
+
+//thêm action creator mới cho việc chọn tỉnh thành
+export const setSelectedProvince = (provinceId) => ({
+    type: actionTypes.SET_SELECTED_PROVINCE,
+    provinceId: provinceId,
+});

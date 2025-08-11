@@ -1,120 +1,60 @@
 {
-    "common": {
-        "add": "Add",
-        "edit": "Edit",
-        "delete": "Delete",
-        "decentralize": "Decentralize",
-        "close": "Close",
-        "save": "Save",
-        "refresh": "Refresh",
-        "accept": "Accept",
-        "confirm": "Confirm",
-        "confirm-this-task": "Are you sure to process this task?",
-        "fail-to-load-data": "Fail to load data",
-        "unknown-error": "There was an error",
-        "internal-server-error": "Internal server error",
-        "bad-request": "Bad request",
-        "forbiden-request": "Invalid input data",
-        "fail-to-load-all-code": "Fail to load data from allcode",
-        "sum": "Sum",
-        "date-range-invalid": "Date range invalid"
-    },
-    "login": {
+    "home-header": {
         "login": "Login",
-        "username": "Username",
-        "password": "Password",
-        "userpass-wrong": "Invalid username or password!"
+        "logout": "Logout",
+        "home": "Home",
+        "campaign": "Campaign",
+        "status": "Status",
+        "donate": "Donate",
+        "about": "About",
+        "contact": "Contact",
+        "welcome": "Welcome, ",
+        "system-manager": "System Manager",
+        "profile": "Profile"
     },
     "menu": {
-        "system": {
-            "header": "System",
-            "system-administrator": {
-                "header": "System Administrator",
-                "user-manage": "User manage",
-                "product-manage": "Package manage",
-                "register-package-group-or-account": "Register service package for group/account"
-            },
-            "system-parameter": {
-                "header": "System-parameter"
-            }
+        "admin": {
+            "system": "System",
+            "statistical": "Statistical",
+            "manage-user": "Manage Users System",
+            "manage-campaign": "Manage Campaign System",
+            "manage-partner": "Manage Partner System",
+            "manage-donation": "Manage Donation System",
+            "manage-product": "Manage Product System",
+            "back-to-home": "◄ Back to Home",
+            "manage-cart": "Manage Cart System",
+            "manage-campaign-donation": "Manage Campaign Donation System"
         }
     },
-    "system": {
-        "user-manage": {
-            "fail-to-load-fouser": "Fail to load system users list",
-            "user-id": "User ID",
-            "usertype": "User type",
-            "username": "Username",
-            "fullname": "Fullname",
-            "mobile": "Phone",
-            "email": "Email",
-            "status": "Status",
-            "add-user": "Add user",
-            "edit-user": "Edit user information",
-            "password": "Password",
-            "retype-password": "Retype password",
-            "add-user-success": "Add user successfully",
-            "edit-user-success": "Change user information successfully",
-            "add-user-fail": "Fail to add user",
-            "edit-user-fail": "Fail to change user information",
-            "del-user-success": "Delete user successfully",
-            "del-user-fail": "Fail to delete user",
-            "invalid-input": {
-                "username": "Please fill in username",
-                "fullname": "Please fill in fullname",
-                "password": "Please fill in password"
-            },
-            "sure-delete-user": "Are you sure to delete this user?"
-        },
-        "product-manage": {
-            "fail-to-load-foprtype": "Fail to load packages list",
-            "prid": "Package ID",
-            "prname": "Package name",
-            "prtype": "Package type",
-            "status": "Status",
-            "description": "Description",
-            "effective-date": "Effective date",
-            "expiration-date": "Expiration date",
-            "add-product": "Add package",
-            "add-product-success": "Add package successfully",
-            "add-product-fail": "Fail to add package",
-            "edit-product": "Edit package information",
-            "package-decentralize": "Package decentralize",
-            "edit-product-success": "Edit package information successfully",
-            "edit-product-fail": "Fail to edit package information",
-            "delete-product-success": "Delete package successfully",
-            "delete-product-fail": "Fail to delete package",
-            "invalid-input": {
-                "prid": "Please fill in package ID",
-                "prname": "Please fill in package name"
-            },
-            "fail-to-load-decentralize-info": "Fail to load decentralize info",
-            "save-decentralize-success": "Save decentralization successfully",
-            "save-decentralize-fail": "Fail to save decentralization",
-            "sure-delete-package": "Are you sure to delete this package?"
-        },
-        "register-package-group-or-acc": {
-            "assign-service-package-to-customer": "Assign service package to customer",
-            "package-name": "Package name",
-            "assign-type": "Assign type",
-            "cust-acc-group": "Customer/account group",
-            "effective-date": "Effective date",
-            "expiration-date": "Expiration date",
-            "assign": "Assign",
-            "manage-assign-groups": "Manage assign groups",
-            "group-cust-acc-name": "Group/customer account name",
-            "del-assign": "Del assign",
-            "fail-to-load-manage-assign-groups-list": "Fail to load manage assign groups list",
-            "invalid-selected": {
-                "currentfoProduct": "Invalid package",
-                "currentAssignType": "Invalid assign type",
-                "currentFoUser": "Invalid customer/account group"
-            },
-            "assign-service-package-to-customer-success": "Assign service package to customer successfully",
-            "assign-service-package-to-customer-fail": "Fail to assign service package to customer",
-            "remove-assign-success": "Unassign service package to customer successfully",
-            "remove-assign-fail": "Fail to unassign service package to customer",
-            "sure-delete-assign": "Are you sure to unassign service package to customer?"
-        }
+    "home-page": {
+        "Protecting earth's existing Edens": "Protecting earth's existing Edens",
+        "Regenerating landscapes to thrive": "Regenerating landscapes to thrive",
+        "description": "We are a non-profit organization that works to protect and regenerate the world's forests, oceans, and soils. We work with local communities to protect and restore ecosystems, and we advocate for policies that protect the environment. Our goal is to create a world where people and nature can thrive together.",
+        "Discover Now": "Discover Now",
+        "Our Unique Carbon Balancing Approach": "Our Unique Carbon Balancing Approach",
+        "Project & Partner Selection": "Project & Partner Selection",
+        "description_Method": "Our unique carbon balancing approach is based on the idea that the best way to reduce carbon emissions is to protect and restore ecosystems. We work with local communities to protect and restore forests, oceans, and soils, and we support policies that protect the environment. Our goal is to create a world where people and nature can thrive together.",
+        "Our Partners": "Our Partners",
+        "Supporting Climate Action": "Supporting Climate Action",
+        "1 million species risk of extinction": "1 million species risk of extinction",
+        "Decline in freshwater species in the past 50 yrs": "Decline in freshwater species in the past 50 years",
+        "13 million hectares of forest lost each year": "13 million hectares of forest lost each year",
+        "High Ethical Standards": "High Ethical Standards",
+        "Open & Transparent": "Open & Transparent",
+        "description_EthicalStandards": "We hold ourselves to the highest ethical standards in all of our work. We are committed to being open and transparent in everything we do, and we strive to build trust with our partners and supporters.",
+        "Whole-System Approach": "Whole-System Approach",
+        "Creation of oxygen for the planet": "Creation of oxygen for the planet",
+        "Planting trees, plants and shrubs": "Planting trees, plants and shrubs",
+        "Locking in carbon": "Locking in carbon",
+        "Improving soil quality": "Improving soil quality",
+        "Maximising and cleaning water systems": "Maximising and cleaning water systems",
+        "Creating edible foods": "Creating edible foods",
+        "Protect biodiversity": "Protect biodiversity",
+        "Strengthen local communities and support landstewards.": "Strengthen local communities and support landstewards.",
+        "Calculate Your Carbon Footprint": "Calculate Your Carbon Footprint",
+        "Do you want to help strengthen climate change resilience for your future?": "Do you want to help strengthen climate change resilience for your future?",
+        "Calculate Your Footprint": "Calculate Your Footprint",
+        "1million": "1 million",
+        "13mimllion": "13 million"
     }
 }
