@@ -1,0 +1,96 @@
+.join-container {
+    height: fit-content;
+    //position: relative;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .join-img-bgr {
+        background: url("../../../assets/images/forest.png") center center
+            no-repeat;
+        height: fit-content;
+        width: 90%;
+        background-size: cover;
+        .join-content {
+            background-color: #ffffffe5;
+            height: fit-content;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 30px;
+            .title-1 {
+                font-size: 5rem;
+                font-weight: bolder;
+                text-align: center;
+                margin-bottom: 20px;
+                color: #1A4F45;
+            }
+            .title-2 {
+                font-size: 5rem;
+                font-weight: bolder;
+                text-align: center;
+                margin-bottom: 20px;
+                color: #6AA5A9;
+            }
+            .description {
+                width: 60%;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-bottom: 20px;
+                color: #1A4F45;
+            }
+            .btn{
+                height: 50px;
+                background-color: #45625D;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 1.5rem;
+                font-weight: 500;
+                cursor: pointer;
+                z-index: 10;
+                transition: all 0.3s;
+                &:hover{
+                    background-color: #577c76;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .join-container {
+        .join-img-bgr {
+            .join-content {
+                .title-1 {
+                    font-size: 4.1rem; /* Giảm kích thước font xuống */
+                }
+                .title-2 {
+                    font-size: 4.1rem; /* Giảm kích thước font xuống */
+                }
+                .description {
+                    font-size: 1.3rem; /* Giảm kích thước font xuống */
+                }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .join-container {
+        .join-img-bgr {
+            .join-content {
+                .title-1 {
+                    font-size: 3.8rem; /* Giảm kích thước font xuống */
+                }
+                .title-2 {
+                    font-size: 3.8rem; /* Giảm kích thước font xuống */
+                }
+                .description {
+                    font-size: 1.2rem; /* Giảm kích thước font xuống */
+                }
+            }
+        }
+    }
+}
