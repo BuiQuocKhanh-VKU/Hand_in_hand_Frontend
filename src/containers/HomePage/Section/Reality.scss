@@ -1,0 +1,123 @@
+.reality-container {
+    height: fit-content;
+    background-color: #ffffff;
+    .reality-content {
+        height: fit-content;
+        width: 100%;
+        background: url("../../../assets/images/forest.png") center center
+            no-repeat;
+        background-size: cover;
+        .filter {
+            height: fit-content;
+            width: 100%;
+            background-color: #1A4F45bd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 160px 40px;
+            .left-content {
+                width: 25%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                h1 {
+                    font-size: 4rem;
+                    font-weight: 700;
+                    text-align: center;
+                    color: #8BDB92;
+                }
+                .small-hr {
+                    width: 50px;             
+                    height: 1.5px;             
+                    background-color: #8BDB92 ; 
+                    border: none;            
+                    margin: 10px auto;       
+                    border-radius: 5px;      
+                }
+                p {
+                    width: 60%;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #ffffff;
+                    text-align: center;
+                }
+            }
+            .center-content {
+                width: 25%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                h1 {
+                    font-size: 4rem;
+                    font-weight: 700;
+                    text-align: center;
+                    color: #8BDB92;
+                }
+                .small-hr {
+                    width: 50px;             
+                    height: 1.5px;             
+                    background-color: #8BDB92 ; 
+                    border: none;            
+                    margin: 10px auto;       
+                    border-radius: 5px;      
+                }
+                p {
+                    width: 80%;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #ffffff;
+                    text-align: center;
+                }
+            }
+            .right-content {
+                width: 25%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                h1 {
+                    font-size: 4rem;
+                    font-weight: 700;
+                    text-align: center;
+                    color: #8BDB92;
+                }
+                .small-hr {
+                    width: 50px;             
+                    height: 1.5px;             
+                    background-color: #8BDB92 ; 
+                    border: none;            
+                    margin: 10px auto;       
+                    border-radius: 5px;      
+                }
+                p {
+                    width: 80%;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #ffffff;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 895px) {
+    .reality-container {
+        .reality-content {
+            .filter {
+                flex-direction: column; /* Thay đổi flex-direction thành column */
+                .left-content,
+                .center-content,
+                .right-content {
+                    width: 100%; /* Chiếm toàn bộ chiều rộng */
+                    margin-bottom: 20px; /* Thêm khoảng cách giữa các phần */
+                    text-align: center; /* Canh giữa các nội dung */
+                }
+            }
+        }
+    }
+}

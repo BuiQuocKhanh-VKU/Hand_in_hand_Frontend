@@ -1,0 +1,85 @@
+.ethical-standards-container{
+    background-color: white;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    .ethical-standards-content{
+        height: fit-content;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        padding: 50px 20px;
+        .left-content{
+            width: 50%;
+            padding-right: 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            h1{
+                font-size: 4rem;
+                font-weight: bolder;
+                margin-bottom: 20px;
+                color: #45625D;
+            }
+            h3{
+                font-size: 2rem;
+                font-weight: bolder;
+                margin-bottom: 20px;
+                color: #45625D;
+            }
+            p{
+                width: 100%;
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-bottom: 20px;
+                color: #45625D;
+                text-align: justify;
+            }
+        }
+        .right-content{
+            width: 50%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .girl-img{
+                background: url('../../../assets/images/green-girl.png') center center no-repeat;
+                background-size: cover;
+                height:  500px;
+                width: 100%;
+            }
+            
+        }
+    }
+}
+/* Responsive layout */
+@media (max-width: 1000px) {
+    .ethical-standards-container {
+        .ethical-standards-content {
+            flex-direction: column; /* Chuyển thành bố cục dọc */
+
+            .left-content,
+            .right-content {
+                width: 100%; /* Chiếm toàn bộ chiều ngang */
+                padding-right: 0; /* Bỏ padding phải */
+                text-align: center; /* Căn giữa nội dung */
+            }
+
+            .left-content {
+                h1 {
+                    font-size: 3rem; /* Giảm kích thước chữ */
+                }
+
+                h3 {
+                    font-size: 1.6rem; /* Giảm kích thước chữ */
+                }
+
+                p {
+                    font-size: 1.2rem; /* Giảm kích thước chữ */
+                }
+            }
+        }
+    }
+}

@@ -3,8 +3,11 @@ import { connect } from "react-redux";
 import HomeHeader from "./HomeHeader";
 import Banner from "./Section/Banner";
 import Join from "./Section/Join";
-import Method from './Section/Method';
+import Method from "./Section/Method";
 import HomeFooter from "./HomeFooter";
+import Approach from "./Section/Approach";
+import EthicalStandards from './Section/EthicalStandards';
+import Reality from './Section/Reality';
 import "./HomePage.scss";
 
 class HomePage extends Component {
@@ -18,12 +21,11 @@ class HomePage extends Component {
       <div className="web-body" ref={this.scrollbarsRef} style={webBodyStyle}>
         <HomeHeader />
         <Banner scrollbarsRef={this.scrollbarsRef} />
-        <Join/>
-          <Method/>
-        {/* <Banner scrollbarsRef={this.scrollbarsRef} />
         <Join />
         <Method />
-        <HomeFooter /> */}
+        <Approach />
+        <EthicalStandards />
+           <Reality/>
         <HomeFooter />
       </div>
     );
