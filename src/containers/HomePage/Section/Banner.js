@@ -63,7 +63,7 @@ const Banner = ({ scrollbarsRef }) => {
       <img src={tree} id="tree" alt="tree" />
       <div className="shadow"></div>
       <h2 className="text" ref={textRef} id="text">
-        GreenPaws
+        Hand in Hand
       </h2>
       <img ref={leafRef} src={leaf} id="leaf" alt="leaf" />
       <img src={deer} id="deer" alt="deer" />
