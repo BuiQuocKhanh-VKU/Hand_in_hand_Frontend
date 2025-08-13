@@ -1,0 +1,93 @@
+.calculator-container {
+    height: 70vh;
+    background-color: #ffffff;
+    .calculator-content {
+        height: 100%;
+        width: 100%;
+        background: url("../../../assets/images/forest-collage.png") center center
+            no-repeat;
+        background-size: cover;
+        
+        .filter {
+            height: 100%;
+            width: 100%;
+            background-color: #1A4F45bd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 160px 40px;
+            h1{
+                font-size: 4rem;
+                font-weight: bolder;
+                text-align: center;
+                color: #ffffff;
+                margin-bottom: 20px;
+            }
+            p{
+                width: 60%;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #ffffff;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .btn{
+                height: 50px;
+                background-color: white;
+                color: #45625D;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 1.5rem;
+                font-weight: 550;
+                cursor: pointer;
+                transition: all 0.3s;
+                z-index: 10;
+                &:hover{
+                    background-color: #bdbdbd;
+                }
+            }
+        }
+    }
+}
+/* Responsive for max-width: 1000px */
+@media (max-width: 1000px) {
+    .calculator-container {
+        .calculator-content {
+            .filter {
+                h1 {
+                    font-size: 3.5rem; /* Giảm kích thước font một chút */
+                }
+
+                p {
+                    font-size: 1.4rem; /* Giảm kích thước font một chút */
+                }
+
+                .btn {
+                    font-size: 1.4rem; /* Giảm kích thước font một chút */
+                }
+            }
+        }
+    }
+}
+
+/* Responsive for max-width: 775px */
+@media (max-width: 775px) {
+    .calculator-container {
+        .calculator-content {
+            .filter {
+                h1 {
+                    font-size: 3rem; /* Giảm kích thước font thêm một chút */
+                }
+
+                p {
+                    font-size: 1.3rem; /* Giảm kích thước font thêm một chút */
+                }
+
+                .btn {
+                    font-size: 1.3rem; /* Giảm kích thước font thêm một chút */
+                }
+            }
+        }
+    }
+}

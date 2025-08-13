@@ -6,8 +6,10 @@ import Join from "./Section/Join";
 import Method from "./Section/Method";
 import HomeFooter from "./HomeFooter";
 import Approach from "./Section/Approach";
-import EthicalStandards from './Section/EthicalStandards';
-import Reality from './Section/Reality';
+import EthicalStandards from "./Section/EthicalStandards";
+import Reality from "./Section/Reality";
+import Partners from "./Section/Partners";
+import Calculator from "./Section/Calculator";
 import "./HomePage.scss";
 
 class HomePage extends Component {
@@ -25,7 +27,9 @@ class HomePage extends Component {
         <Method />
         <Approach />
         <EthicalStandards />
-           <Reality/>
+        <Reality />
+        <Partners />
+        <Calculator />
         <HomeFooter />
       </div>
     );
