@@ -18,6 +18,8 @@ import HomePage from './HomePage/HomePage.js';
 import AboutUs from './About/AboutUs.js';
 import ContactUs from './Contact/ContactUs.js';
 import Campaign from './Campaign/CampaignPage.js';
+import DonateUs from './Donate/DonateUs.js'
+import CheckOut from './Donate/CheckOut/CheckOut.js';
 
 import { CustomToastCloseButton } from '../components/CustomToast';
 import ConfirmModal from '../components/ConfirmModal';
@@ -61,6 +63,10 @@ class App extends Component {
                                 <Route path={path.ABOUT_US} component={withCustomScrollbar(AboutUs)} />
                                 <Route path={path.CONTACT_US} component={withCustomScrollbar(ContactUs)} />
                                 <Route path={path.CAMPAIGN} component={withCustomScrollbar(Campaign)} />
+                                <Route path={path.DONATE} component={withCustomScrollbar(DonateUs)} />
+                                <Route path={path.CHECKOUT} component={withCustomScrollbar(CheckOut)} />      
+
+
 
                             </Switch>
                               </CustomScrollbars>

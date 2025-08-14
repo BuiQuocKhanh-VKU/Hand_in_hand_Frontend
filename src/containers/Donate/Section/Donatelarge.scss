@@ -1,0 +1,68 @@
+.donateLarge-container {
+   height: 650px;
+   width: 100%;
+   justify-content: center;
+   display: flex;
+   align-items: center;
+
+   .donateLarge-content {
+      height: 95%;
+      width: 90%;
+      padding-top: 50px;
+      justify-content: center;
+      display: flex;
+      justify-items: center;
+
+      .donateLarge-content-left {
+         width: 50%;
+         height: 100%;
+
+         .donateLarge-content-left-top {
+            margin-top: 40px;
+
+            h1 {
+               font-size: 36px;
+               font-weight: 700;
+               color: #45625d;
+            }
+         }
+
+         .donateLarge-content-left-center {
+            p {
+               line-height: 30px;
+               font-weight: 400;
+               margin-top: 33px;
+               margin-bottom: 3rem;
+               font-size: 18px;
+            }
+         }
+
+         .donateLarge-content-left-under {
+            .btn-donateLarge {
+               color: white;
+               font-weight: 600;
+               border-radius: 7px;
+               height: 55px;
+               width: 196px;
+               background-color: #3a8b66;
+               border: none;
+            }
+         }
+      }
+
+      .donateLarge-content-right {
+         height: 100%;
+         width: 50%;
+
+         .parrot-image {
+            background-image: url("../../../assets/images/parrot.png") !important;
+            background-repeat: no-repeat;
+            background-attachment: local !important;
+            background-size: contain;
+            position: relative !important;
+            background-position: center;
+            height: 100%;
+         }
+      }
+   }
+}

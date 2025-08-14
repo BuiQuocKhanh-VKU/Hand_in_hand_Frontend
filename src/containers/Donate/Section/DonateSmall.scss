@@ -1,0 +1,171 @@
+.donateSmall-container {
+   height: 856px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-image: url("../../../assets/images/small-donatebg.png") !important;
+   background-repeat: no-repeat;
+   background-attachment: local !important;
+   background-size: cover;
+   position: relative !important;
+   background-position: center;
+
+   .title-donateSmall {
+      height: 122px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      /* Center horizontally */
+      align-items: center;
+
+      h1 {
+         text-align: center;
+         font-weight: 900;
+         color: #45625d;
+         font-size: 34px;
+      }
+   }
+
+   .donateSmall-content {
+      height: 100%;
+      width: 80%;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center;
+
+      .donateSmall-content-left {
+         height: 550px;
+         width: 33%;
+         background-color: #d7cb6c;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         padding-top: 46px;
+
+         .fa-tree {
+            font-size: 52px;
+            color: white;
+         }
+
+         .text-donateSmall {
+            h3 {
+               color: white;
+               font-size: 30px;
+               font-weight: 700;
+               padding-top: 14px;
+               padding-bottom: 20px;
+            }
+
+            span {
+               color: white;
+               font-size: 20px;
+               line-height: 33px;
+            }
+         }
+
+         .btn-donateSmall {
+            border: none;
+            font-weight: 600;
+            font-size: 15px;
+            color: white;
+            text-transform: none;
+            height: 45px;
+            width: 163px;
+            margin-top: 26px;
+            border-radius: 8px;
+            background-color: #388652;
+         }
+      }
+
+      .donateSmall-content-center {
+         height: 609px;
+         width: 34%;
+         background-color: #e9a257;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         padding-top: 60px;
+
+         .fa-tree {
+            font-size: 52px;
+            color: white;
+         }
+
+         .text-donateSmall {
+            h3 {
+               color: white;
+               font-size: 30px;
+               font-weight: 700;
+               padding-top: 14px;
+               padding-bottom: 20px;
+            }
+
+            span {
+               color: white;
+               font-size: 20px;
+               line-height: 33px;
+            }
+         }
+
+         .btn-donateSmall {
+            border: none;
+            font-weight: 600;
+            font-size: 15px;
+            color: white;
+            text-transform: none;
+            height: 45px;
+            width: 163px;
+            margin-top: 45px;
+            border-radius: 8px;
+            background-color: #388652;
+         }
+      }
+
+      .donateSmall-content-right {
+         height: 550px;
+         width: 33%;
+         background-color: #84b086;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         padding-top: 46px;
+
+         .fa-tree {
+            font-size: 52px;
+            color: white;
+         }
+
+         .text-donateSmall {
+            h3 {
+               color: white;
+               font-size: 30px;
+               font-weight: 700;
+               padding-top: 14px;
+               padding-bottom: 20px;
+            }
+
+            span {
+               color: white;
+               font-size: 20px;
+               line-height: 33px;
+            }
+         }
+
+         .btn-donateSmall {
+            border: none;
+            font-weight: 600;
+            font-size: 15px;
+            color: white;
+            text-transform: none;
+            height: 45px;
+            width: 163px;
+            margin-top: 26px;
+            border-radius: 8px;
+            background-color: #388652;
+         }
+      }
+   }
+}
