@@ -1,0 +1,71 @@
+.WhyYouSupport {
+   margin-left: 67px;
+   margin-top: 90px;
+   height: 650px;
+   width: 92%;
+   background-image: url("../../../assets/images/WhyYouSupport-bg.jpg") !important;
+   background-repeat: no-repeat;
+   background-attachment: fixed !important;
+   background-size: cover;
+   position: relative !important;
+   background-position: center;
+
+   .WhyYouSupport-container {
+      background-image: linear-gradient(rgba(93, 102, 95, 0.68), rgba(0, 0, 0, 0.97));
+      height: 100%;
+      width: 100%;
+      background-color: #00090052;
+      justify-content: center;
+      align-items: center;
+      font-family: "futura light bt";
+
+      .WhyYouSupport-bg {
+         height: 100%;
+         filter: drop-shadow(2px 4px 6px black);
+
+         .content-top {
+            height: 40%;
+
+            h3 {
+               color: aliceblue;
+               padding-top: 34px;
+               font-size: 32px;
+               font-weight: 600;
+               display: flex;
+               justify-content: center;
+            }
+
+            .logo {
+               background: url("../../../assets/images/logooo.png");
+               background-repeat: no-repeat;
+               background-size: contain;
+               background-position: center;
+               width: 100%;
+               height: 68%;
+               padding-top: 60px;
+               cursor: pointer;
+            }
+         }
+      }
+
+      .content-down {
+         display: initial;
+         height: 60%;
+
+         p {
+            color: white;
+            font-weight: 500;
+            text-align: -webkit-center;
+            font-size: 20px;
+            padding-right: 300px;
+            display: flex;
+            margin-top: 0;
+            line-height: inherit;
+            margin-bottom: auto;
+            height: 60%;
+            margin-top: 35px;
+            padding-left: 300px;
+         }
+      }
+   }
+}

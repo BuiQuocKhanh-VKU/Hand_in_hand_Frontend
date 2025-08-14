@@ -44,7 +44,7 @@ const HomeFooter = () => {
       </div>
       <div className="hr"></div>
       <div className="copy-right">
-        <p>&copy; 2025 Khanh. Mọi quyền được bảo lưu.</p>
+        <p>&copy; 2025 Khánh & Nghĩa. Mọi quyền được bảo lưu.</p>
       </div>
     </div>
   );

@@ -1,0 +1,86 @@
+.VisionMission {
+   height: 650px;
+   width: 100%;
+
+   .Vision {
+      height: 50%;
+      width: 100%;
+      padding: 45px 20px 45px 20px;
+
+      .Vision-content {
+         height: 100%;
+         width: 90%;
+         margin-left: 80px;
+
+         .Vision-content-bg {
+            background-image: url("../../../assets/images/vision-bg.webp") !important;
+            background-repeat: no-repeat;
+            background-attachment: local !important;
+            background-size: cover;
+            position: relative !important;
+            height: 100%;
+            background-position: center;
+
+            .paragraph {
+               padding-top: 90px;
+               padding-left: 50px;
+               height: 100%;
+               width: 100%;
+               color: white;
+
+               h1 {
+                  font-size: 60px;
+                  color: white;
+                  font-weight: 700;
+
+                  p {
+                     font-weight: 400;
+                     font-size: 16px;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .Mission {
+      height: 50%;
+      width: 100%;
+      padding: 45px 20px 45px 20px;
+
+      .Mission-content {
+         height: 100%;
+         width: 90%;
+         margin-left: 80px;
+
+         .Mission-content-bg {
+            background-image: url("../../../assets/images/vision-bg.webp") !important;
+            background-repeat: no-repeat;
+            background-attachment: local !important;
+            background-size: cover;
+            position: relative !important;
+            height: 100%;
+            background-position: center;
+
+            .paragraph {
+               padding-top: 90px;
+               padding-left: 50px;
+               height: 100%;
+               width: 100%;
+               color: white;
+
+               h1 {
+                  font-size: 60px;
+                  color: white;
+                  font-weight: 700;
+
+                  p {
+                     font-weight: 400;
+                     font-size: 16px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,83 @@
+.WhoAreGP {
+   margin: 0;
+   padding: 0;
+   height: 739px;
+   width: 100%;
+   text-align: center;
+
+   .WhoAreGP-content {
+      height: 600px;
+      width: 95%;
+      display: flex;
+      gap: 10px;
+
+      .WhoAreGP-content-left {
+         width: 50%;
+         height: 100%;
+         margin-left: 100px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         .left-content {
+            width: 80%;
+            margin-top: 80px;
+            height: 80%;
+
+            .paragraph-top {
+               width: 100%;
+               display: flex;
+               flex-direction: column;
+
+               h1 {
+                  text-align: left;
+                  width: 80%;
+                  font-weight: 700;
+                  font-size: 60px;
+                  color: #45625d;
+               }
+            }
+
+            .paragraph-bottom {
+               p {
+                  width: 100%;
+                  text-align: left;
+                  font-size: 22px;
+                  color: #45625d;
+               }
+
+               .btn {
+                  width: 300px;
+                  height: 38px;
+                  border-radius: 6px;
+                  float: left;
+                  border: none;
+                  background-color: #3f845b;
+                  margin-top: 10px;
+                  font-size: 16px;
+                  color: white;
+
+                  &:hover {
+                     cursor: pointer;
+                     background-color: #3ea662 !important;
+                  }
+               }
+            }
+         }
+      }
+
+      .WhoAreGP-content-right {
+         width: 50%;
+         height: 100%;
+
+         .right-content {
+            margin-top: 75px;
+            background-image: url("../../../assets/images/parot.png") !important;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+         }
+      }
+   }
+}

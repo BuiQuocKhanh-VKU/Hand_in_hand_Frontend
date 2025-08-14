@@ -15,6 +15,8 @@ import Header from './Header/Header';
 import System from '../routes/System';
 import HomePage from './HomePage/HomePage.js'; 
 
+import AboutUs from './About/AboutUs.js';
+
 import { CustomToastCloseButton } from '../components/CustomToast';
 import ConfirmModal from '../components/ConfirmModal';
 
@@ -54,6 +56,7 @@ class App extends Component {
                                 <Route path={path.SIGNUP} component={withCustomScrollbar(Signup)} />
                                 <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
                                 <Route path={path.HOMEPAGE} component={withCustomScrollbar(HomePage)} />
+                                <Route path={path.ABOUT_US} component={withCustomScrollbar(AboutUs)} />
                             </Switch>
                               </CustomScrollbars>
                         </div>
