@@ -1,0 +1,191 @@
+.detail-container {
+   font-family: Arial, Helvetica, sans-serif;
+   height: fit-content;
+   width: 100%;
+   background-color: #f5f5f5;
+   padding: 20px 100px;
+   display: flex;
+   flex-direction: row;
+   .left-content {
+      width: 12%;
+      height: 100%;
+      padding: 30px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: left;
+      h1 {
+         font-size: 1.8rem;
+         font-weight: 500;
+         color: #1a4f45;
+         margin-bottom: 10px;
+         margin-top: 30px;
+      }
+      p {
+         font-size: 1.1rem;
+         font-weight: 450;
+         color: #1a4f45;
+         margin-bottom: 20px;
+         i {
+            font-size: 1.3rem;
+            color: #1a4f45;
+            margin-right: 10px;
+         }
+      }
+   }
+   .center-content {
+      width: 50%;
+      height: 100%;
+      padding: 30px 40px;
+      h1 {
+         font-size: 36px;
+         font-weight: 500;
+         color: #1a4f45;
+         text-align: center;
+         margin-bottom: 20px;
+      }
+      p {
+         font-size: 1.1rem;
+         font-weight: 350;
+         color: #1a4f45;
+         margin: 10px 0px;
+      }
+
+      ol {
+         margin: 20px 0;
+         padding-left: 20px;
+      }
+
+      ol li {
+         font-size: 16px;
+         color: #1a4f45;
+         margin-bottom: 10px;
+         line-height: 1.5;
+      }
+      ul li {
+         font-size: 16px;
+         color: #1a4f45;
+         margin-bottom: 10px;
+         line-height: 1.5;
+      }
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         margin-top: 30px;
+      }
+
+      table th,
+      table td {
+         border: 1px solid #ddd;
+         padding: 12px;
+         text-align: left;
+      }
+
+      table th {
+         background-color: #359381;
+         color: white;
+      }
+
+      table td {
+         background-color: #f9f9f9;
+      }
+
+      table tr:nth-child(even) td {
+         background-color: #f2f2f2;
+      }
+
+      table tr:hover td {
+         background-color: #dadada;
+      }
+      /* Cải tiến kiểu cho blockquote */
+      blockquote {
+         background-color: #e9f7f7;
+         border-left: 5px solid #359381; /* Thêm đường kẻ bên trái */
+         padding: 15px 20px;
+         font-style: italic;
+         margin: 20px 0;
+         font-size: 18px;
+         color: #555;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      blockquote p {
+         margin: 0;
+      }
+
+      img {
+         max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của container */
+         height: auto; /* Giữ tỉ lệ cho hình ảnh */
+         border-radius: 8px; /* Bo góc cho hình ảnh */
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ cho hình ảnh */
+         margin: 20px 0; /* Tạo khoảng cách trên dưới cho hình ảnh */
+         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động */
+      }
+
+      /* Thêm hiệu ứng hover cho hình ảnh */
+      img:hover {
+         transform: scale(1.05); /* Phóng to hình ảnh một chút khi rê chuột */
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bóng đổ mạnh hơn khi hover */
+      }
+   }
+   .right-content {
+      width: 38%;
+      height: 100%;
+      padding: 30px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      .login-info {
+         height: 130px;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         button {
+            font-size: 1.1rem;
+            font-weight: 450;
+            height: 50px;
+            width: 100%;
+            color: #ffffff;
+            background-color: #d46a6a;
+            border: none;
+            border-radius: 8px;
+            padding: 0px 20px;
+            cursor: pointer;
+            &:hover {
+               background-color: #9c4f4f;
+            }
+         }
+      }
+      .location {
+         height: auto;
+         width: 100%;
+         h1 {
+            font-size: 1.8rem;
+            font-weight: 450;
+            color: #1a4f45;
+            margin-bottom: 20px;
+         }
+         p {
+            font-size: 1.1rem;
+            font-weight: 350;
+            color: #1a4f45;
+            margin: 10px 0px;
+            i {
+               font-size: 1.3rem;
+               color: #1a4f45;
+               margin-right: 10px;
+            }
+         }
+         iframe {
+            height: 400px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 3px 3px 4px 0 #00000045;
+            margin-top: 20px;
+         }
+      }
+   }
+}

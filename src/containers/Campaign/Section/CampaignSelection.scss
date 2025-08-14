@@ -1,0 +1,177 @@
+.campaign-selection-container {
+   height: 745px;
+   width: 100%;
+
+   .space {
+      height: 90px;
+      width: 100%;
+      background-color: white;
+   }
+   .campaign-selection-content {
+      height: 655px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      .left-content {
+         height: 100%;
+         width: 45%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .right-content {
+         height: 100%;
+         width: 55%;
+         display: flex;
+         flex-direction: column;
+
+         .banner-img {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+               height: 85%;
+               width: 95%;
+               margin: 3% 3%;
+               border-radius: 10px;
+            }
+         }
+         .infor {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .infor-title {
+               height: 20%;
+               width: 90%;
+               display: flex;
+               justify-content: center;
+               margin: 0 5%;
+               flex-direction: column;
+               align-items: start;
+               h1 {
+                  font-size: 2.5em;
+                  font-weight: bold;
+                  color: #359381;
+               }
+               .dividing-line {
+                  height: 3px;
+                  width: 45%;
+                  background-color: #359381;
+               }
+            }
+            .infor-content-1 {
+               height: 40%;
+               width: 90%;
+               display: flex;
+               justify-content: space-between;
+               flex-direction: row;
+               margin: 0 5%;
+               .total-campaign {
+                  height: 100%;
+                  width: 30%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: start;
+                  h1 {
+                     font-size: 1.3em;
+                     color: #359381;
+                  }
+                  .total-campaign-number {
+                     font-size: 3.5em;
+                     font-weight: bold;
+                     color: #359381;
+                  }
+               }
+               .total-money {
+                  height: 100%;
+                  width: 65%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: start;
+                  h1 {
+                     font-size: 1.3em;
+                     color: #359381;
+                  }
+                  .total-money-number {
+                     font-size: 3.5em;
+                     font-weight: bold;
+                     color: #359381;
+                  }
+               }
+            }
+            .infor-content-2 {
+               height: 40%;
+               width: 90%;
+               display: flex;
+               justify-content: space-between;
+               flex-direction: row;
+               margin: 0 5%;
+               .active-campaigns {
+                  height: 100%;
+                  width: 30%;
+                  .dividing-line {
+                     height: 3px;
+                     width: 90%;
+                     margin-bottom: 10px;
+                     background-color: #359381;
+                  }
+                  .active-campaigns-title {
+                     font-size: 1.3em;
+                     color: #359381;
+                  }
+                  .active-campaigns-number {
+                     font-size: 3.5em;
+                     font-weight: bold;
+                     color: #359381;
+                  }
+               }
+               .completed-campaigns {
+                  height: 100%;
+                  width: 30%;
+                  .dividing-line {
+                     height: 3px;
+                     width: 90%;
+                     margin-bottom: 10px;
+                     background-color: #359381;
+                  }
+                  .completed-campaigns-title {
+                     font-size: 1.3em;
+                     color: #359381;
+                  }
+                  .completed-campaigns-number {
+                     font-size: 3.5em;
+                     font-weight: bold;
+                     color: #359381;
+                  }
+               }
+               .past-campaigns {
+                  height: 100%;
+                  width: 30%;
+                  .dividing-line {
+                     height: 3px;
+                     width: 90%;
+                     margin-bottom: 10px;
+                     background-color: #359381;
+                  }
+                  .past-campaigns-title {
+                     font-size: 1.3em;
+                     color: #359381;
+                  }
+                  .past-campaigns-number {
+                     font-size: 3.5em;
+                     font-weight: bold;
+                     color: #359381;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

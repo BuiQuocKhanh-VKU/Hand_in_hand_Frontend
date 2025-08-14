@@ -17,6 +17,7 @@ import HomePage from './HomePage/HomePage.js';
 
 import AboutUs from './About/AboutUs.js';
 import ContactUs from './Contact/ContactUs.js';
+import Campaign from './Campaign/CampaignPage.js';
 
 import { CustomToastCloseButton } from '../components/CustomToast';
 import ConfirmModal from '../components/ConfirmModal';
@@ -59,6 +60,7 @@ class App extends Component {
                                 <Route path={path.HOMEPAGE} component={withCustomScrollbar(HomePage)} />
                                 <Route path={path.ABOUT_US} component={withCustomScrollbar(AboutUs)} />
                                 <Route path={path.CONTACT_US} component={withCustomScrollbar(ContactUs)} />
+                                <Route path={path.CAMPAIGN} component={withCustomScrollbar(Campaign)} />
 
                             </Switch>
                               </CustomScrollbars>

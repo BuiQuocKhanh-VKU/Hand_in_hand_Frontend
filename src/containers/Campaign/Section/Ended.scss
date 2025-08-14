@@ -1,0 +1,133 @@
+.ended-container {
+   background-color: #ffffff;
+   padding: 20px 0;
+   margin: 60px 0px;
+   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+   .ended-title {
+      text-align: left;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #359381;
+      margin-left: 100px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      i {
+         color: #359381;
+         font-size: 1.2rem;
+         margin-right: 10px;
+      }
+   }
+   .ended-content {
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 0px 50px;
+      .ended-item {
+         overflow: hidden; /* Ẩn phần thừa của ảnh */
+         position: relative;
+         img {
+            height: 50vh;
+            width: 25em;
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center center;
+            position: relative;
+         }
+         .text-overlay {
+            border-radius: 10px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            // transform: translate(
+            //     -50%,
+            //     -50%
+            // );
+            background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.718));
+
+            h1 {
+               font-size: 1.5rem;
+               font-weight: 700;
+               color: #ffffff;
+               margin: 20px 20px;
+            }
+            p {
+               font-size: 1.2rem;
+               font-weight: 400;
+               color: #ffffff;
+               margin: 10px 20px;
+               display: -webkit-box; /* Cần cho line-clamp */
+               -webkit-box-orient: vertical; /* Hướng của box */
+               overflow: hidden; /* Ẩn phần văn bản thừa */
+               text-overflow: ellipsis; /* Thêm dấu "..." */
+               -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+               height: 3em; /* Điều chỉnh phù hợp với số dòng */
+               line-height: 1.5em; /* Chiều cao mỗi dòng */
+            }
+         }
+         .filter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #359381;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 700;
+            opacity: 0;
+            transition: all 0.5s;
+            &:hover {
+               opacity: 0.8;
+               cursor: pointer;
+            }
+         }
+      }
+
+      .slick-prev {
+         background-color: transparent !important;
+         border-radius: 50% !important;
+         left: -10 !important;
+         z-index: 100;
+         height: 40px !important;
+         width: 40px !important;
+         &:hover {
+            color: #393939 !important;
+         }
+         &:before {
+            font-size: 40px !important;
+            color: #787878 !important;
+         }
+      }
+      .slick-next {
+         background-color: transparent !important;
+         border-radius: 50% !important;
+         right: 10 !important;
+         height: 40px !important;
+         width: 40px !important;
+         &:hover {
+            color: #393939 !important;
+         }
+         &:before {
+            font-size: 40px !important;
+            color: #787878 !important;
+         }
+      }
+   }
+}
+
+.slick-track {
+   .slick-slide {
+      display: flex !important;
+      justify-content: center;
+   }
+
+   .slick-slide > div {
+      margin: 0 10px !important;
+   }
+}

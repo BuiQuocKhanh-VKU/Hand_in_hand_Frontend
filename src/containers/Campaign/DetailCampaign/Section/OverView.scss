@@ -1,0 +1,37 @@
+.overview-container {
+   height: 640px;
+   overflow: hidden;
+   .transparent {
+      background-color: transparent;
+      height: 90px;
+      width: 100%;
+   }
+   .overview-content {
+      height: 550px;
+      width: 100%;
+      background-size: cover;
+
+      .gradient {
+         background: linear-gradient(180deg, #00000057 0%, #000000bd 100%);
+         height: 100%;
+         width: 100%;
+         padding: 100px 150px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: start;
+         p {
+            font-size: 1.5rem;
+            font-weight: 100;
+            color: #ffffff;
+            margin-bottom: 20px;
+         }
+         h1 {
+            font-size: 4.5rem;
+            font-weight: 1000;
+            color: #ffffff;
+            margin-bottom: 20px;
+         }
+      }
+   }
+}

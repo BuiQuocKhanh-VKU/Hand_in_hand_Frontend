@@ -1,0 +1,97 @@
+.partner-container {
+   background-color: #ffffff;
+   padding: 20px 0;
+   font-family: sans-serif;
+   //margin: 10px 0px;
+   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+   .partner-title {
+      text-align: left;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #359381;
+      margin-left: 100px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      i {
+         color: #359381;
+         font-size: 2rem;
+         margin-right: 10px;
+      }
+   }
+   .partner-content {
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 0px 50px;
+      .partner-item {
+         overflow: hidden; /* Ẩn phần thừa của ảnh */
+         position: relative;
+
+         .text-overlay {
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+               height: fit-content;
+               width: 130px;
+               //object-fit: cover;
+               object-fit: contain;
+               object-position: center center;
+               position: relative;
+            }
+            h1 {
+               font-size: 1.5rem;
+               font-weight: 700;
+               text-align: center;
+               color: #000000;
+               margin: 20px 20px;
+            }
+         }
+      }
+
+      .slick-prev {
+         background-color: transparent !important;
+         border-radius: 50% !important;
+         left: -10 !important;
+         z-index: 100;
+         height: 40px !important;
+         width: 40px !important;
+         &:hover {
+            color: #393939 !important;
+         }
+         &:before {
+            font-size: 40px !important;
+            color: #787878 !important;
+         }
+      }
+      .slick-next {
+         background-color: transparent !important;
+         border-radius: 50% !important;
+         right: 10 !important;
+         height: 40px !important;
+         width: 40px !important;
+         &:hover {
+            color: #393939 !important;
+         }
+         &:before {
+            font-size: 40px !important;
+            color: #787878 !important;
+         }
+      }
+   }
+}
+
+.slick-track {
+   .slick-slide {
+      display: flex !important;
+      justify-content: center;
+   }
+
+   .slick-slide > div {
+      margin: 0 10px !important;
+   }
+}
