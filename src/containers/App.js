@@ -4,31 +4,27 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { history } from '../redux'
 import { ToastContainer } from 'react-toastify';
 import { userIsAuthenticated, userIsNotAuthenticated} from '../hoc/authentication';
-import CustomScrollbars from '../components/CustomScrollbars.js';
-import withCustomScrollbar from '../hoc/withNoCustomScrollbar';
 import { path } from '../utils'
-
 import Home from '../routes/Home';
-import Signup from './Auth/Signup.js';
 import Login from './Auth/Login';
-import Header from './Header/Header';
 import System from '../routes/System';
+import { CustomToastCloseButton } from '../components/CustomToast';
 import HomePage from './HomePage/HomePage.js'; 
+import CustomScrollbars from '../components/CustomScrollbars.js';
+import Signup from './Auth/Signup.js';
 
 import AboutUs from './About/AboutUs.js';
 import ContactUs from './Contact/ContactUs.js';
+import Status from './Status/StatusPage.js';
 import Campaign from './Campaign/CampaignPage.js';
 import DonateUs from './Donate/DonateUs.js'
-import CheckOut from './Donate/CheckOut/CheckOut.js';
-import Status from './Status/StatusPage.js';
-import DetailCampaign from './Campaign/DetailCampaign/DetailCampaign.js';
 import OurProduct from './ProductPage/OurProduct.js';
-import Profile from './Profile/Profile.js';
+import DetailCampaign from './Campaign/DetailCampaign/DetailCampaign.js';
 import BadRequest from './ErrorDocs/404.js';
+import CheckOut from './Donate/CheckOut/CheckOut.js';
+import Profile from './Profile/Profile.js';
 
-import { CustomToastCloseButton } from '../components/CustomToast';
-import ConfirmModal from '../components/ConfirmModal';
-
+import withCustomScrollbar from '../hoc/withNoCustomScrollbar.js';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -52,7 +48,8 @@ class App extends Component {
     render() {
         return (
             <Fragment>
-<BrowserRouter history={history}>
+                {/* lưu lại data sau đăng nhập trên front-end*/}
+                <BrowserRouter history={history}>
                     <div className="main-container" style={{fontFamily: "futura bt"}}>
                         {/* nếu logging r thì render tới header */}
 
@@ -94,7 +91,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
     return {
-     started: state.app.started,
+        started: state.app.started,
         isLoggedIn: state.user.isLoggedIn,
         isAdmin: state.user.isAdmin
     };

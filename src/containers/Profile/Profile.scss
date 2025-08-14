@@ -1,0 +1,591 @@
+.modal-email-container {
+    font-family: Arial, Helvetica, sans-serif;
+  .modal-content{
+    .modal-header{
+      justify-content: space-between;
+      background-color: #fff !important;
+      margin: 10px  !important;
+    .modal-title {
+        font-weight: 600 !important;
+        font-size: 1.5em !important;
+        color: #000;
+        
+
+    }
+      button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        font-size: 27px;
+      }
+    }
+    .modal-footer{
+      .btn-primary{
+        background-color: #359381;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        height: 40px !important;
+        width: 100%;
+        cursor: pointer;
+        &:hover{
+          background-color: #2b6c5d;
+        }
+      }
+    }
+  }
+    .modal-email-body {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin: 10px;
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        
+            .form-control {
+                border-radius: 7px;
+                border: 1px solid rgba(128, 128, 128, 0.773);
+                outline: none;
+                padding: 0 10px;
+                
+            }
+        }
+    }
+}
+.your-account-container {
+    font-family: Noto Sans Vietnamese, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+    .space {
+        height: 90px;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        margin-bottom: 10px;
+    }
+    .your-account-content {
+        height: calc(100vh - 100px);
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .left-content {
+            width: fit-content;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            .overview {
+                height: 60px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                padding: 0 10px;
+                .profile-img {
+                    height: 60px;
+                    width: 60px;
+                    margin-right: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    i {
+                        font-size: 3.5rem;
+                        color: #000000;
+                    }
+                    
+                }
+                .overview-info {
+                    width: calc(100% - 60px);
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    h1 {
+                        font-size: 1.2rem;
+                        font-weight: 550;
+                        color: #000000;
+                        margin: 0;
+                    }
+                    p {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        color: #606060;
+                        margin: 0;
+                    }
+                }
+            }
+            .selection {
+                height: 70px;
+                width: 100%;
+                padding: 10px 10px;
+                .selection-content {
+                    height: 100%;
+                    width: 100%;
+                    background-color: transparent;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-direction: row;
+                    border-radius: 7px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.06);
+                        .selection-item p {
+                            font-weight: 600;
+                        }
+                    }
+                    &:active {
+                        background-color: rgba(205, 159, 255, 0.219);
+                        .selection-item p {
+                            font-weight: 600;
+                        }
+                    }
+                    .icon {
+                        height: 100%;
+                        width: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        i {
+                            font-size: 1.2rem;
+                            color: #000000;
+                        }
+                    }
+                    .selection-item {
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin-right: 10px;
+                        p {
+                            font-size: 1.1rem;
+                            font-weight: 400;
+                            color: #000000;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .right-content {
+            flex: 1;
+            //background-color: rgb(219, 249, 206);
+            overflow-y: scroll;
+            overflow-x: visible;
+            .right-container {
+                width: 770px;
+                margin-left: 10px;
+                height: fit-content;
+                background-color: rgb(255, 255, 255);
+                .your-account-header {
+                    height: 45px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    h1 {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        color: #000000;
+                        margin: 0;
+                    }
+                }
+                .profile-image {
+                    margin-top: 15px;
+                    height: 150px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    
+                    .profile-image-content {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-direction: row;
+                        h6{
+                            font-size: 1rem;
+                            font-weight: 400;
+                            color: #000000;
+                            margin-left: 10px;
+                        }
+                        
+                        .interact-btn {
+                            width: fit-content;
+                            height: 100%;
+                            padding: 0 10px;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            .delete-image {
+                                height: 40px;
+                                width: 130px;
+                                border: none;
+                                color: rgb(0, 0, 0);
+                                background-color: transparent;
+                                font-size: 16px;
+                                font-weight: 500;
+                                border-radius: 7px;
+                                cursor: pointer;
+                                margin-right: 10px;
+                                &:hover {
+                                    background-color: rgba(0, 0, 0, 0.06);
+                                }
+                            }
+                            .change-image {
+                                height: 40px;
+                                width: 130px;
+                                border: 1px solid rgba(0, 0, 0, 0.19);
+                                color: rgb(0, 0, 0);
+                                display: flex;
+                                background-color: transparent;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 7px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                cursor: pointer;
+                                margin-left: 10px;
+                                &:hover {
+                                    background-color: rgba(0, 0, 0, 0.06);
+                                }
+                            }
+                        }
+                    }
+                    .edit-name{
+                        height: 100%;
+                        width: 100%;
+                        margin-right: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: row;
+                        gap:20px;
+                        input{
+                            height: 40px;
+                            width: 100%;
+                            border: 1px solid rgba(0, 0, 0, 0.19);
+                            font-size: 1rem;
+                            font-weight: 400;
+                            color: #000000;
+                            border-radius: 7px;
+                            padding: 0 10px;
+                            margin: 0 !important;
+                        }
+                        .btn-light{
+                            height: 40px;
+                            width: 130px;
+                            border: 1px solid rgba(0, 0, 0, 0.19);
+                            margin: 0 !important;
+                            color: rgb(0, 0, 0);
+                            background-color: transparent;
+                            font-size: 16px;
+                            font-weight: 500;
+                            border-radius: 7px;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: rgba(0, 0, 0, 0.06);
+                            }
+                        }
+                        .btn-success{
+                            height: 40px;
+                            width: 130px;
+                            border: none;
+                            margin: 0 !important;
+                            color: rgb(255, 255, 255);
+                            background-color: #359381;
+                            font-size: 16px;
+                            font-weight: 500;
+                            border-radius: 7px;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: #2b6c5d;
+                            }
+                        }
+                    }
+                    ._PhRSQ {
+                        border: none;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.407);
+                        box-sizing: border-box;
+                        height: 1px;
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+                .security{
+                    height: fit-content;
+                    width: 100%;
+                    border-radius: 7px;
+                    padding-bottom: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    h1 {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                        color: #000000;
+                    }
+                    .change-password{
+                        height: fit-content;
+                        width: 100%;
+                        .change-password-content{
+                            height: fit-content;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            .change-password-box{
+                                height: 100px;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                                border: 1px solid rgba(0, 0, 0, 0.19);
+                                border-radius: 7px;
+                                padding: 0 10px;
+                                .icon-box{
+                                    height: 50px;
+                                    width: 50px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border: 1px solid rgba(0, 0, 0, 0.19);
+                                    border-radius: 7%;
+                                    i{
+                                        font-size: 1.5rem;
+                                        color: #000000;
+                                    }
+                                }
+                                .right{
+                                    height: 100%;
+                                    width: calc(100% - 50px);
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    h1{
+                                        font-size: 1.2rem;
+                                        font-weight: 600;
+                                        color: #000000;
+                                        margin-bottom: 0 !important;
+                                        margin-top: 25px;
+                                    }
+                                    p{
+                                        font-size: 1rem;
+                                        font-weight: 400;
+                                        color: #000000;
+                                        a{
+                                            cursor: pointer;
+                                            text-decoration: underline;
+                                            color: #359381;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+                            }
+                            ._PhRSQ {
+                                border: none;
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.407);
+                                box-sizing: border-box;
+                                height: 1px;
+                                width: 100%;
+                                margin: 0;
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                    .delete-account{
+                        height: fit-content;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        h1{
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            color: #000000;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                        }
+                        p{
+                            font-size: 1rem;
+                            font-weight: 400;
+                            color: #000000;
+                            margin-bottom: 10px;
+                        }
+                        button{
+                            height: 40px;
+                            width: 130px;
+                            border: none;
+                            color: rgb(0, 0, 0);
+                            border: 1px solid rgba(0, 0, 0, 0.19);
+                            background-color: transparent;
+                            font-size: 16px;
+                            font-weight: 500;
+                            border-radius: 7px;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: #7878780f;
+                            }
+                        }
+                        
+                    }
+
+                }
+                ._PhRSQ {
+                    border: none;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.407) !important;
+                    box-sizing: border-box;
+                    height: 1px;
+                    width: 100%;
+                    margin: 0;
+                }
+                .donation{
+                    height: fit-content;
+                    width: 100%;
+                    .donation-title{
+                        height: 45px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: row;
+                        h1{
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            color: #000000;
+                            margin: 0;
+                        }
+                    }
+                    .product{
+                        height: 100px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        border: 1px solid rgba(0, 0, 0, 0.19);
+                        border-bottom: dashed 2px rgba(0, 0, 0, 0.19) !important;
+                        border-radius: 7px;
+                        .product-img{
+                            height: 100%;
+                            flex:2;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                height: 80px;
+                                width: 80px;
+                                border-radius: 3px;
+                                object-fit: cover;
+                                object-position: center center;
+                                position: relative;
+                            }
+                        }
+                        .product-info{
+                            height: 100%;
+                            flex: 8;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            h1{
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                                color: #000000;
+                                margin-top: 10px;
+                            }
+                            p{
+                                font-size: 1rem;
+                                font-weight: 400;
+                                color: #000000;
+                                margin: 0;
+                            }
+                        }
+                        .total-price{
+                            height: 100%;
+                            flex: 3;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-end;
+                            h1{
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                                color: #000000;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                    .repurchase-btn{
+                        height: fit-content;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        border: 1px solid rgba(0, 0, 0, 0.19);
+                        border-top: dashed 1px rgba(0, 0, 0, 0.19) !important;
+                        border-radius: 7px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        button{
+                            height: 40px;
+                            width: 130px;
+                            border: none;
+                            color: rgb(255, 255, 255);
+                            background-color: #359381;
+                            font-size: 16px;
+                            font-weight: 500;
+                            border-radius: 7px;
+                            margin: 10px !important;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: #2b6c5d;
+                            }
+                        }
+                    }
+                }
+                .campaign{
+                    height: fit-content;
+                    width: 100%;
+                    .campaign-title{
+                        height: 45px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: row;
+                        h1{
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            color: #000000;
+                            margin: 0 ;
+                        }
+                    }
+                    .campaign-content{
+                        thead  th {
+                            text-align: center;
+                            padding: 10px;
+                            font-size: 14px;
+                        }
+                        tbody td,th {
+                            text-align: center;
+                            padding: 10px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
