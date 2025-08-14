@@ -1,0 +1,145 @@
+.Contact-container {
+   height: 1420px;
+
+   .transparent {
+      background-color: #ffffff;
+      height: 90px;
+      width: 100%;
+   }
+
+   .Contact-content {
+      height: 1250px;
+      width: 100%;
+
+      .Contact-content-top {
+         height: 38%;
+         width: 100%;
+         background-image: url("../../../assets/images/contact-us.jpg") !important;
+         background-repeat: no-repeat;
+         background-attachment: fixed !important;
+         background-size: cover;
+         position: relative !important;
+         background-position: center;
+         justify-content: center;
+         align-items: center;
+
+         .top-bg {
+            background-color: #181f138f !important;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            .text-contact {
+               display: flex;
+               color: white;
+               font-size: 90px;
+               justify-content: center;
+               padding-top: 180px;
+               font-weight: 900;
+               font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+                  "Open Sans", "Helvetica Neue", sans-serif;
+            }
+         }
+      }
+
+      .Contact-content-bottom {
+         height: 62%;
+         text-align: center;
+         display: flex;
+         justify-content: center;
+
+         .bottom-content {
+            height: 100%;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            padding-left: 20px;
+            padding-top: 162px;
+            padding-bottom: 152px;
+            padding-right: 20px;
+            margin-top: -1px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+
+            .bottom-content-left {
+               width: 50%;
+               place-items: center;
+               margin-left: 45px;
+
+               .bottom-content-left-top {
+                  h3 {
+                     text-align: left;
+                     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+                        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                     font-size: 37px;
+                     color: #45625d;
+                     direction: ltr;
+                     font-weight: 900;
+                     font-style: normal;
+                     box-sizing: border-box;
+                     padding-top: 50px;
+                     margin-bottom: 20px;
+                  }
+               }
+
+               .bottom-content-left-middle {
+                  color: rgb(115, 111, 111);
+                  font-weight: inherit;
+                  font-size: 18px;
+                  line-height: 33px;
+               }
+
+               .bottom-content-left-under {
+                  width: 60%;
+
+                  .btn-send-mess {
+                     width: 199px;
+                     height: 37px;
+                     color: #ffffff;
+                     margin-top: 21px;
+                     background-color: #3f845b;
+                     border-radius: 7px;
+                     outline: none;
+                     border: none;
+                  }
+               }
+            }
+
+            .bottom-content-right {
+               width: 50%;
+               display: flex;
+               justify-content: flex-start;
+               align-items: flex-start;
+
+               p {
+                  font-size: 21px;
+               }
+
+               /* Căn lề trên cùng */
+               .bottom-content-right-content {
+                  text-align: left;
+                  margin-left: 46px;
+                  padding-left: 30px;
+                  padding-top: 45px;
+                  line-height: 25px;
+
+                  .fa-map-marker-alt {
+                     font-size: 36px;
+                     padding-left: 10px;
+                     color: #45625d;
+                  }
+
+                  .fa-envelope {
+                     margin-top: 40px;
+                     font-size: 36px;
+                     padding-left: 10px;
+                     color: #45625d;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -6,7 +6,6 @@ import AboutHeader from './Section/AboutHeader';
 import WhoAreGP from './Section/WhoAreGP';
 import VisionMission from './Section/VisionMission';
 import WhyYouSupport from './Section/WhyYouSupport';
-import OurStory from './Section/OurStory';
 import StartYourCacbon from './Section/StartYourCacbon';
 import './AboutUs.scss';
 import "slick-carousel/slick/slick.css";
