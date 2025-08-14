@@ -1,0 +1,190 @@
+.GreenPlan-container {
+   display: flex;
+   justify-content: center;
+   height: 1000px;
+   width: 100%;
+   padding-top: 60px;
+
+   .GreenPlan-content {
+      height: 83%;
+      width: 95%;
+      display: flex;
+      justify-content: center;
+
+      .GreenPlan-content-left {
+         width: 60%;
+         height: 60%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         .GreenPlan-image {
+            background-image: url("../../../assets/images/GreenPlan.png") !important;
+            background-repeat: no-repeat;
+            background-attachment: local !important;
+            background-size: cover;
+            position: relative !important;
+            height: 100%;
+            width: 95%;
+
+            background-position: center;
+         }
+      }
+
+      .GreenPlan-content-right {
+         width: 40%;
+
+         .title-GreenPlan {
+            flex-direction: column;
+            display: flex;
+            height: 120px;
+            padding-top: 37px;
+            align-items: center;
+
+            h1 {
+               color: #45625d;
+               font-weight: 900;
+               font-size: 44px;
+            }
+
+            p {
+               font-size: 17px;
+               color: #45625d;
+            }
+         }
+
+         .buy-product-GreenPlan {
+            .bg {
+               width: 100%;
+
+               h3 {
+                  margin-top: 40px;
+                  font-size: 18px;
+                  font-weight: 700;
+               }
+
+               p {
+                  width: 60%;
+                  font-size: 16px;
+               }
+
+               span {
+                  font-weight: 600;
+                  font-size: 17px;
+               }
+            }
+
+            .product-content {
+               padding-left: 20px;
+               display: flex;
+               padding-top: 28px;
+
+               .product-content-qty {
+                  span {
+                     font-weight: 600;
+                     font-size: 17px;
+                  }
+               }
+
+               .qty {
+                  .quantity {
+                     background-color: #f8f7f7;
+                     border-radius: 5px;
+                     width: 110px;
+                     height: 30px;
+                     margin-left: 14px;
+                  }
+               }
+            }
+
+            .product-purchase-controll {
+               .btn-action {
+                  display: flex;
+                  flex-direction: column;
+                  margin-top: 34px;
+
+                  .add-btn {
+                     font-weight: 600;
+                     font-size: 16px;
+                     color: white;
+                     margin-left: 10px;
+                     border: none;
+                     margin-bottom: 5px;
+                     width: 40%;
+                     border-radius: 30px;
+                     background-color: #43935f;
+                     height: 46px;
+                     cursor: pointer;
+                     transition: background-color 0.3s ease, transform 0.3s ease;
+                  }
+
+                  .add-btn:hover {
+                     background-color: #367a4d;
+                     /* Thay đổi màu nền khi hover */
+                     transform: scale(1.05);
+                     /* Phóng to nút khi hover */
+                  }
+
+                  .go-to-check-btn {
+                     font-weight: 600;
+                     font-size: 16px;
+                     border: none;
+                     color: white;
+                     margin-left: 10px;
+                     width: 40%;
+                     border-radius: 30px;
+                     background-color: #43935f;
+                     height: 46px;
+                     cursor: pointer;
+                     transition: background-color 0.3s ease, transform 0.3s ease;
+                  }
+
+                  .go-to-check-btn:hover {
+                     background-color: #367a4d;
+                     /* Thay đổi màu nền khi hover */
+                     transform: scale(1.05);
+                     /* Phóng to nút khi hover */
+                  }
+               }
+            }
+
+            .description {
+               font-size: 16px;
+               padding-top: 35px;
+
+               p {
+                  text-indent: 30px;
+               }
+            }
+
+            .product-share {
+               align-items: center;
+               flex-direction: column;
+               display: flex;
+               font-size: 21px;
+
+               h3 {
+                  font-size: 25px;
+                  font-weight: 600;
+                  color: #45625d;
+               }
+
+               .share-content {
+                  .fa-facebook {
+                     color: #4646de;
+                  }
+
+                  .fa-telegram {
+                     color: #43c5cb;
+                     margin: 8px;
+                  }
+
+                  .fa-instagram {
+                     color: #cd3c56;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
