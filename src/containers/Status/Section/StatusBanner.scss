@@ -1,0 +1,39 @@
+.status-banner-container {
+   height: 100vh;
+   overflow: hidden;
+   .transparent {
+      background-color: transparent;
+      height: 90px;
+      width: 100%;
+   }
+   .status-banner-content {
+      height: 100%;
+      width: 100%;
+      background: url("../../../assets/images/status-banner.png") no-repeat center center;
+      background-size: cover;
+
+      .gradient {
+         background: linear-gradient(180deg, #486f655c 0%, #000000bd 90%);
+         height: 100%;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         h1 {
+            font-size: 7rem;
+            font-weight: 1000;
+            color: #ffffff;
+            margin-bottom: 20px;
+         }
+         p {
+            width: 60%;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+         }
+      }
+   }
+}
