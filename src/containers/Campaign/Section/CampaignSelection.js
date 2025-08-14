@@ -7,8 +7,8 @@ import InteractiveMap from "./InteractiveMap";
 import { setSelectedProvince } from "../../../store/actions/appActions";
 
 const CampaignSelection = ({ setSelectedProvince }) => {
-   const [provinceOverview, setProvinceOverview] = useState(null); // Store selected province data
-   // Reset data khi component được mount
+   const [provinceOverview, setProvinceOverview] = useState(null); // Lưu trữ dữ liệu tỉnh đã chọn
+   // Reset dữ liệu khi component được mount
    useEffect(() => {
       setProvinceOverview(null); // Reset dữ liệu tỉnh đã chọn
       setSelectedProvince(null); // Reset ID tỉnh trong Redux
@@ -16,7 +16,7 @@ const CampaignSelection = ({ setSelectedProvince }) => {
 
    const handleProvinceSelect = (overviewData) => {
       setProvinceOverview(overviewData);
-      setSelectedProvince(overviewData.province.id); // Store selected province id using mapDispatchToProps
+      setSelectedProvince(overviewData.province.id); // Lưu ID tỉnh đã chọn vào Redux
    };
 
    return (
@@ -30,20 +30,20 @@ const CampaignSelection = ({ setSelectedProvince }) => {
                <div className="banner-img">
                   <img
                      src={provinceOverview?.province?.image || non}
-                     alt={provinceOverview?.province?.name || "Select, please"}
+                     alt={provinceOverview?.province?.name || "Chọn tỉnh"}
                   />
                </div>
                <div className="infor">
                   <div className="infor-title">
                      <h1 style={{ fontFamily: "Helvetica" }}>
-                        Overview - {provinceOverview?.province?.name || "No Selection"}
+                        Tổng quan - {provinceOverview?.province?.name || "Chưa chọn tỉnh"}
                      </h1>
                      <div className="dividing-line" />
                   </div>
                   <div className="infor-content-1">
                      <div className="total-campaign">
                         <div className="total-campaign-title">
-                           <h1>Total Campaign</h1>
+                           <h1>Tổng số chiến dịch</h1>
                         </div>
                         <div className="total-campaign-number">
                            <CountUp
@@ -56,7 +56,7 @@ const CampaignSelection = ({ setSelectedProvince }) => {
                      </div>
                      <div className="total-money">
                         <div className="total-money-title">
-                           <h1>Total Donation Amount</h1>
+                           <h1>Tổng số tiền quyên góp</h1>
                         </div>
                         <div className="total-money-number">
                            <CountUp
@@ -72,21 +72,21 @@ const CampaignSelection = ({ setSelectedProvince }) => {
                   <div className="infor-content-2">
                      <div className="active-campaigns">
                         <div className="dividing-line" />
-                        <div className="active-campaigns-title">Ended Campaign</div>
+                        <div className="active-campaigns-title">Chiến dịch đã kết thúc</div>
                         <div className="active-campaigns-number">
                            <CountUp start={0} end={provinceOverview?.endedCampaigns || 0} duration={1} />
                         </div>
                      </div>
                      <div className="completed-campaigns">
                         <div className="dividing-line" />
-                        <div className="completed-campaigns-title">Ongoing Campaign</div>
+                        <div className="completed-campaigns-title">Chiến dịch đang diễn ra</div>
                         <div className="completed-campaigns-number">
                            <CountUp start={0} end={provinceOverview?.ongoingCampaigns || 0} duration={1.2} />
                         </div>
                      </div>
                      <div className="past-campaigns">
                         <div className="dividing-line" />
-                        <div className="past-campaigns-title">Upcoming Campaign</div>
+                        <div className="past-campaigns-title">Chiến dịch sắp tới</div>
                         <div className="past-campaigns-number">
                            <CountUp start={0} end={provinceOverview?.upcomingCampaigns || 0} duration={1.4} />
                         </div>

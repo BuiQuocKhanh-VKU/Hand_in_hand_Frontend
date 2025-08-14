@@ -45,7 +45,7 @@ class Partner extends Component {
          <div className="partner-container">
             <div className="partner-title">
                <i class="fa fa-users"></i>
-               Our Partners
+               Nhà tài trợ  
             </div>
             <div className="partner-content">
                <Slider {...settings}>

@@ -11,9 +11,11 @@ class Detail extends Component {
          detailCampaigns: [],
       };
    }
+
    handleNavigate = (path) => {
       this.props.history.push(path);
    };
+
    async componentDidMount() {
       if (this.props.match && this.props.match.params && this.props.match.params.id) {
          let inputId = this.props.match.params.id;
@@ -23,12 +25,13 @@ class Detail extends Component {
                this.setState({ detailCampaigns: response.campaigns });
             }
          } catch (error) {
-            console.error("Error fetching campaigns:", error);
+            console.error("Lỗi khi lấy thông tin chiến dịch:", error);
          }
       } else {
-         console.log("No id found");
+         console.log("Không tìm thấy id");
       }
    }
+
    render() {
       const { isLoggedIn } = this.props;
       let { detailCampaigns } = this.state;
@@ -36,14 +39,14 @@ class Detail extends Component {
          <div className="detail-container">
             <div className="left-content">
                <div className="status">
-                  <h1>Status</h1>
+                  <h1>Trạng thái</h1>
                   <p>
                      <i class="fa fa-tasks" aria-hidden="true"></i>
                      {detailCampaigns && detailCampaigns.status && detailCampaigns.status}
                   </p>
                </div>
                <div className="start-date">
-                  <h1>Start date</h1>
+                  <h1>Ngày bắt đầu</h1>
                   <p>
                      <i class="fa fa-calendar-alt" aria-hidden="true"></i>
                      {detailCampaigns &&
@@ -52,7 +55,7 @@ class Detail extends Component {
                   </p>
                </div>
                <div className="end-date">
-                  <h1>End date</h1>
+                  <h1>Ngày kết thúc</h1>
                   <p>
                      <i class="fa fa-calendar-alt" aria-hidden="true"></i>
                      {detailCampaigns &&
@@ -61,12 +64,12 @@ class Detail extends Component {
                   </p>
                </div>
                <div className="donor-num">
-                  <h1>Donors</h1>
+                  <h1>Số người đóng góp</h1>
                   <p>
                      <i class="fa fa-users" aria-hidden="true"></i>
                      {detailCampaigns && detailCampaigns.donations && detailCampaigns.donations.length > 0
                         ? detailCampaigns.donations.length
-                        : "No Donor"}
+                        : "Chưa có người đóng góp"}
                   </p>
                </div>
             </div>
@@ -87,12 +90,12 @@ class Detail extends Component {
                            this.handleNavigate(`/login/${this.props.match.params.id}`);
                         }}
                      >
-                        Login to join our campaign
+                        Đăng nhập để tham gia chiến dịch
                      </button>
                   </div>
                )}
                <div className="location">
-                  <h1>Location</h1>
+                  <h1>Địa điểm</h1>
                   <p>
                      <i class="fas fa-map-marker-alt"></i>
                      {detailCampaigns &&

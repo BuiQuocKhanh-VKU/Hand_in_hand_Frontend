@@ -14,6 +14,7 @@ class Value extends Component {
          progress: 0,
       };
    }
+
    async componentDidMount() {
       if (this.props.match && this.props.match.params && this.props.match.params.id) {
          let inputId = this.props.match.params.id;
@@ -29,10 +30,10 @@ class Value extends Component {
                );
             }
          } catch (error) {
-            console.error("Error fetching campaigns:", error);
+            console.error("Lỗi khi lấy thông tin chiến dịch:", error);
          }
       } else {
-         console.log("No id found");
+         console.log("Không tìm thấy id");
       }
    }
 
@@ -46,17 +47,18 @@ class Value extends Component {
          } else {
             clearInterval(progressInterval);
          }
-      }, 50); // Tăng 1% mỗi 20ms
+      }, 50); // Tăng 1% mỗi 50ms
    };
+
    render() {
       let { detailCampaigns, ratio, progress } = this.state;
-      let remainingDate = Math.ceil((new Date(detailCampaigns.end_date) - new Date()) / (1000 * 3600 * 24));
+      let remainingDate = Math.ceil((new Date(detailCampaigns.end_date) - new Date()) / (1000 * 3600 * 24)); // Tính số ngày còn lại
       return (
          <div className="value-container">
             <div className="left-content">
                <div className="hr" />
                <div className="total-value">
-                  <h1>Total value </h1>
+                  <h1>Tổng giá trị</h1>
                   <p>{<CountUp start={0} end={detailCampaigns.target_amount} duration={3} separator="." />} ₫</p>
                </div>
                <div className="hr" />
@@ -64,7 +66,7 @@ class Value extends Component {
             <div className="right-content">
                <div className="hr" />
                <div className="top-right">
-                  <h1>Donation progress </h1>
+                  <h1>Tiến độ quyên góp</h1>
                   <p>
                      {<CountUp start={0} end={detailCampaigns.current_amount} duration={3} separator="." />}₫/
                      {<CountUp start={0} end={detailCampaigns.target_amount} duration={3} separator="." />}₫
@@ -78,20 +80,20 @@ class Value extends Component {
                </div>
                <div className="bottom-right">
                   <div className="remain">
-                     <h1>Donation Percentage</h1>
+                     <h1>Tỷ lệ quyên góp</h1>
                      <p>
                         <CountUp start={0} end={ratio} duration={3} decimals={2} />%
                      </p>
                   </div>
                   <div className="remain">
-                     <h1>Remaining Percentage</h1>
+                     <h1>Tỷ lệ còn lại</h1>
                      <p>
                         <CountUp start={0} end={100 - ratio} duration={3} decimals={2} />%
                      </p>
                   </div>
                   <div className="remain">
-                     <h1>Remaining Days</h1>
-                     <p>{<CountUp start={0} end={remainingDate} duration={3} />} days</p>
+                     <h1>Số ngày còn lại</h1>
+                     <p>{<CountUp start={0} end={remainingDate} duration={3} />} ngày</p>
                   </div>
                </div>
                <div className="hr" />

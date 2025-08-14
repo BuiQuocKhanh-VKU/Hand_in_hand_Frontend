@@ -6,7 +6,9 @@ import { withRouter } from "react-router-dom";
 import { createNewCampaignDonationService } from "../../../../services/campaignDonationService";
 import { getAllCampaigns } from "../../../../services/campaignService";
 import AlertContainer from "../../../../components/AlertContainer";
+
 const COUNTDOWN_TIME = 300; //10 giây -- 300 giây = 5 phút
+
 class JoinCampaign extends Component {
    constructor(props) {
       super(props);
@@ -22,9 +24,11 @@ class JoinCampaign extends Component {
       this.alertRef = React.createRef();
       this.listenToEmitter();
    }
+
    showAlert = (message, type) => {
       this.alertRef.current.showAlert(message, type);
    };
+
    listenToEmitter = () => {
       emitter.on("EVENT_CLEAR_MODAL_DATA", () => {
          this.setState({
@@ -36,36 +40,34 @@ class JoinCampaign extends Component {
    };
 
    handleOnChangeInput = (event, id) => {
-      //good code
       let copyState = { ...this.state };
       copyState[id] = event.target.value;
       this.setState({
          ...copyState,
       });
    };
-   //hàm này dùng để kiểm tra xem input có đúng không
+
    checkValidateInput = () => {
       let isValid = true;
       let arrInput = ["user_id", "campaign_id", "amount"];
       for (let i = 0; i < arrInput.length; i++) {
          if (!this.state[arrInput[i]]) {
             isValid = false;
-            this.showAlert("Please input " + arrInput[i], "warning");
+            this.showAlert("Vui lòng nhập " + arrInput[i], "warning");
             break;
          }
       }
-      // Kiểm tra thêm nếu amount không phải số hoặc nhỏ hơn 0
       if (isValid && isNaN(this.state.amount)) {
          isValid = false;
-         this.showAlert("Amount must be a number!", "warning");
+         this.showAlert("Số tiền phải là một số!", "warning");
       }
       if (isValid && parseFloat(this.state.amount) <= 1000) {
          isValid = false;
-         this.showAlert("Amount must be greater than 1000 VND!", "warning");
+         this.showAlert("Số tiền phải lớn hơn 1000 VND!", "warning");
       }
       return isValid;
    };
-   //hàm lấy dữ liệu chuyển khoản
+
    async checkPaid() {
       const API_KEY =
          "AK_CS.7ff8b6d0bdd311ef9cf3ed0b3d7702f1.DVYCoU7C36BG4vFZBpGsCyHH2KbQfzyjqbVMZg7cKk54ckCiHIdcPSWCei8cMetNoH8d2rxN";
@@ -79,7 +81,7 @@ class JoinCampaign extends Component {
       const data = await response.json();
       return data;
    }
-   //hàm này dùng để giới hạn thời gian chuyển khoản
+
    checkTransactionValidity = async () => {
       const startTime = new Date().getTime();
       const maxDuration = COUNTDOWN_TIME * 600; // 5 phút
@@ -108,16 +110,16 @@ class JoinCampaign extends Component {
             }
          } catch (error) {
             console.error("Lỗi khi kiểm tra giao dịch: ", error);
-            this.showAlert("Error when checking transaction", "error");
+            this.showAlert("Lỗi khi kiểm tra giao dịch", "error");
          }
-         await new Promise((resolve) => setTimeout(resolve, 5000)); //mỗi 5s kiểm tra 1 lần
+         await new Promise((resolve) => setTimeout(resolve, 5000)); // Mỗi 5s kiểm tra 1 lần
       }
       if (!transactionValid) {
          clearInterval(this.countdownInterval);
          this.setState({ transactionStatus: "fail", showQRCode: false });
       }
    };
-   //hàm này dùng để xử lý sự kiện khi click vào nút donate
+
    handleDonateClick = () => {
       let isValid = this.checkValidateInput();
       if (isValid) {
@@ -126,6 +128,7 @@ class JoinCampaign extends Component {
          this.checkTransactionValidity(); // Kiểm tra giao dịch
       }
    };
+
    async handleGetCampaignDetail() {
       if (this.props.match && this.props.match.params && this.props.match.params.id) {
          let inputId = this.props.match.params.id;
@@ -135,13 +138,13 @@ class JoinCampaign extends Component {
                this.setState({ detailCampaigns: response.campaigns });
             }
          } catch (error) {
-            console.error("Error fetching campaigns:", error);
+            console.error("Lỗi khi lấy thông tin chiến dịch:", error);
          }
       } else {
-         console.log("No id found");
+         console.log("Không tìm thấy id");
       }
    }
-   //hàm này dùng để lưu user_id vào localStorage để khi reload trang vẫn giữ được user_id
+
    componentDidMount() {
       this.handleGetCampaignDetail();
       const savedUserId = localStorage.getItem("user_id");
@@ -151,7 +154,7 @@ class JoinCampaign extends Component {
          });
       }
    }
-   //hàm này dùng để cập nhật lại user_id khi user đăng nhập
+
    componentDidUpdate(prevProps) {
       if (prevProps.userInfo !== this.props.userInfo && this.props.userInfo) {
          this.setState({
@@ -160,7 +163,7 @@ class JoinCampaign extends Component {
          localStorage.setItem("user_id", this.props.userInfo.id);
       }
    }
-   //hàm này dùng để thêm mới campaignDonation
+
    handleAddNewCampaignDonation = async () => {
       let isValid = this.checkValidateInput();
       const { user_id, campaign_id, amount } = this.state;
@@ -177,10 +180,11 @@ class JoinCampaign extends Component {
                emitter.emit("EVENT_CLEAR_MODAL_DATA");
             }
          } catch (error) {
-            console.log("Create New Campaign Donation error: ", error);
+            console.log("Lỗi khi tạo chiến dịch quyên góp mới: ", error);
          }
       }
    };
+
    startCountdown = () => {
       this.setState({ countdown: COUNTDOWN_TIME }); // 300 giây = 5 phút
       this.countdownInterval = setInterval(() => {
@@ -196,8 +200,7 @@ class JoinCampaign extends Component {
    };
 
    render() {
-      console.log("su thay doi cua state ", this.state);
-      const url = `https://img.vietqr.io/image/MB-00170920050-compact2.png?amount=${this.state.amount}&addInfo=${this.state.transfer_content}&accountName=GreenPaws%20Organization`;
+      const url = `https://img.vietqr.io/image/MB-00170920050-compact2.png?amount=${this.state.amount}&addInfo=${this.state.transfer_content}&accountName=Hand%20in%20Hand%20Organization`;
       const { showQRCode, countdown, transactionStatus, detailCampaigns } = this.state;
 
       return (
@@ -207,35 +210,35 @@ class JoinCampaign extends Component {
                   {/* tạo form điền thông tin quyên góp */}
                   <div className="payment-container">
                      <div className="card cart">
-                        <label className="title">JOIN CAMPAIGN</label>
+                        <label className="title">THAM GIA CHIẾN DỊCH</label>
                         <div className="steps">
                            <div className="step">
                               <div>
-                                 <span>CAMPAIGN</span>
+                                 <span>CHIẾN DỊCH</span>
                                  <p>
                                     {detailCampaigns.id}, {detailCampaigns.title}
                                  </p>
                               </div>
                               <hr />
                               <div>
-                                 <span>PAYMENT METHOD</span>
-                                 <p>Internet Banking</p>
+                                 <span>PHƯƠNG THỨC THANH TOÁN</span>
+                                 <p>Ngân hàng trực tuyến</p>
                                  <p>MBBank</p>
                               </div>
                               <hr />
                               <div className="promo">
-                                 <span>INPUT PAYMENT INFORMATION</span>
+                                 <span>NHẬP THÔNG TIN THANH TOÁN</span>
                                  <form className="form">
                                     <input
                                        type="text"
-                                       placeholder="Enter donation amount"
+                                       placeholder="Nhập số tiền quyên góp"
                                        className="input_field"
                                        onChange={(event) => this.handleOnChangeInput(event, "amount")}
                                        value={this.state.amount}
                                     />
                                     <textarea
                                        type="text"
-                                       placeholder="Enter transfer content"
+                                       placeholder="Nhập nội dung chuyển khoản"
                                        className="input_field"
                                        onChange={(event) => this.handleOnChangeInput(event, "transfer_content")}
                                        value={this.state.transfer_content}
@@ -244,9 +247,9 @@ class JoinCampaign extends Component {
                               </div>
                               <hr />
                               <div className="payments">
-                                 <span>PAYMENT</span>
+                                 <span>THANH TOÁN</span>
                                  <div className="details">
-                                    <span>Subtotal:</span>
+                                    <span>Tổng cộng:</span>
                                     <span>
                                        {this.state.amount
                                           ? parseInt(this.state.amount).toLocaleString("vi-VN") + "đ"
@@ -264,7 +267,7 @@ class JoinCampaign extends Component {
                               {this.state.amount ? parseInt(this.state.amount).toLocaleString("vi-VN") + "đ" : "0đ"}
                            </label>
                            <button type="submit" className="checkout-btn" onClick={() => this.handleDonateClick()}>
-                              Donate
+                              Quyên góp
                            </button>
                         </div>
                      </div>
@@ -277,7 +280,7 @@ class JoinCampaign extends Component {
                            <>
                               <img src={url} alt="qr" />
                               <p>
-                                 You have {Math.floor(countdown / 60)} m {countdown % 60} s to make transaction.
+                                 Bạn còn {Math.floor(countdown / 60)} phút {countdown % 60} giây để thực hiện giao dịch.
                               </p>
                            </>
                         ) : transactionStatus === "success" ? (
@@ -290,7 +293,7 @@ class JoinCampaign extends Component {
                                  <div className="post">
                                     <div className="post-line"></div>
                                     <div className="screen">
-                                       <div className="dollar">Successful</div>
+                                       <div className="dollar">Thành công</div>
                                     </div>
                                     <div className="numbers"></div>
                                     <div className="numbers-line2"></div>
@@ -308,7 +311,7 @@ class JoinCampaign extends Component {
                                  <div className="post">
                                     <div className="post-line"></div>
                                     <div className="screen">
-                                       <div className="dollar">Failed</div>
+                                       <div className="dollar">Thất bại</div>
                                     </div>
                                     <div className="numbers"></div>
                                     <div className="numbers-line2"></div>
