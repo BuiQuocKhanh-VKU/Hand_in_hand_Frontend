@@ -7,6 +7,7 @@ import Header from "../containers/Header/Header";
 import Statistical from "../containers/System/Statistical";
 import UserManage from "../containers/System/UserManage";
 import CampaignManage from "../containers/System/CampaignManage";
+import PartnerManage from "../containers/System/PartnerManage";
 
 class System extends Component {
    render() {
@@ -28,6 +29,10 @@ class System extends Component {
                      <Route
                         path="/system/campaign-manage"
                         component={userIsAdmin(CampaignManage)} // Sử dụng HOC
+                     />
+                     <Route
+                        path="/system/partner-manage"
+                        component={userIsAdmin(PartnerManage)} // Sử dụng HOC
                      />
                      <Route
                         component={() => {
