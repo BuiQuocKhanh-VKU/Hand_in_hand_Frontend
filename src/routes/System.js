@@ -10,7 +10,7 @@ import CampaignManage from "../containers/System/CampaignManage";
 import PartnerManage from "../containers/System/PartnerManage";
 import CampaignDonationManage from "../containers/System/CampaignDonationManage";
 import ProductManage from "../containers/System/Donation/ProductManage";
-
+import DonationManage from "../containers/System/Donation/DonationManage";
 
 class System extends Component {
    render() {
@@ -44,6 +44,10 @@ class System extends Component {
                      <Route
                         path="/system/product-manage"
                         component={userIsAdmin(ProductManage)} // Sử dụng HOC
+                     />
+                     <Route
+                        path="/system/donation-manage"
+                        component={userIsAdmin(DonationManage)} // Sử dụng HOC
                      />
 
                      <Route

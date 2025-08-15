@@ -27,6 +27,10 @@ export const adminMenu = [
             name: "menu.admin.manage-product",
             link: "/system/product-manage",
          },
+         {
+            name: "menu.admin.manage-donation",
+            link: "/system/donation-manage",
+         },
       ],
    },
 ];
