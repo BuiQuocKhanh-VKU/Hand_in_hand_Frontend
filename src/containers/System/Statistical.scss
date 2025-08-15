@@ -1,0 +1,99 @@
+.statistical-container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 10px 10px;
+   .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-left: 35px;
+      color: #31af58;
+      display: flex;
+   }
+   .overview-info {
+      width: 100%;
+      height: 150px;
+      display: flex;
+      border-radius: 8px;
+      padding: 10px 10px;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      .item {
+         box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+         height: 100%;
+         flex: 3;
+         background-color: rgb(255, 255, 255);
+         border-radius: 8px;
+         margin: 10px 25px;
+         padding: 10px 10px;
+         display: flex;
+         flex-direction: column;
+         .top-content {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            i {
+               font-size: 50px;
+               margin-top: 10px;
+            }
+            .right {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: flex-end;
+               h1 {
+                  font-size: 30px;
+                  font-weight: bold;
+               }
+               p {
+                  font-size: 10px;
+                  margin: 0;
+                  font-weight: bold;
+               }
+            }
+         }
+         .divider {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            margin: 10px 0px 30px 0px;
+         }
+      }
+   }
+   .chart {
+      width: 100%;
+      height: 485px;
+      padding: 10px 33px;
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      .circle-chart {
+         flex: 1;
+         box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+         padding: 10px 10px;
+         h1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0071ba;
+            margin: 10px 0px;
+         }
+      }
+      .bar-chart {
+         flex: 2;
+         box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+         padding: 10px 10px;
+         h1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0071ba;
+            margin: 10px 0px;
+         }
+      }
+   }
+}
