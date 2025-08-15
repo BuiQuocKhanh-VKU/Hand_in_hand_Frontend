@@ -1,0 +1,370 @@
+.Cart-container {
+   width: 100%;
+   height: 100%;
+
+   .banner {
+      height: 90px;
+      color: white;
+      box-shadow: 9px 1px 8px #3a9987;
+   }
+
+   .cart_content {
+      display: flex;
+
+      .left_content {
+         width: 40%;
+         height: 100%;
+         padding-top: 100px;
+
+         .left_content_inner {
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            height: 100%;
+            width: 70%;
+
+            .page_title {
+               justify-content: center;
+               display: flex;
+
+               h1 {
+                  color: #45625d;
+                  font-weight: 600;
+                  font-size: 42px;
+               }
+            }
+
+            .cart_item {
+               display: flex;
+               flex-direction: column;
+               align-items: end;
+
+               .cart_item_inner {
+                  display: flex;
+                  align-items: end;
+                  flex-direction: column;
+                  width: 420px;
+
+                  .cart_item_content {
+                     display: flex;
+                     width: 100%;
+                     margin-top: 20px;
+
+                     // .cart_item_img {
+
+                     // 	background-repeat    : no-repeat;
+                     // 	background-attachment: local !important;
+                     // 	background-size      : contain;
+                     // 	background-position  : center;
+                     // 	height               : 80px;
+                     // 	width                : 60px;
+                     // }
+
+                     .cart_item_wrap {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        font-size: 15px;
+
+                        .cart_item_wrap_top {
+                           display: flex;
+                           justify-content: space-between;
+                           align-items: flex-start;
+
+                           .name_item {
+                              p {
+                                 font-size: 16px;
+                              }
+                           }
+
+                           .remove_item {
+                              display: flex;
+                              justify-content: flex-end;
+
+                              .remove_button {
+                                 border: none;
+                                 color: #e83c3c;
+                                 background: white;
+                                 font-size: 24px;
+                                 cursor: pointer;
+                                 transition: color 0.3s ease;
+                              }
+                           }
+                        }
+
+                        .cart_item_wrap_bottom {
+                           display: flex;
+                           justify-content: space-between;
+                           align-items: flex-end;
+                           margin-top: auto;
+                           width: 100%;
+
+                           .cart_item_quantity {
+                              display: flex;
+                              color: #3f845b;
+                              align-items: center;
+
+                              .cart_item_quantity_inner {
+                                 display: flex;
+
+                                 .select_text {
+                                 }
+
+                                 .arrow_column {
+                                    display: flex;
+                                    color: #45625d;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    gap: 1px;
+
+                                    .arrow {
+                                       font-size: 10px;
+                                       cursor: pointer;
+                                       margin: 0;
+                                       padding: 0;
+                                       line-height: 1;
+                                       display: inline-flex;
+                                       justify-content: center;
+                                       align-items: center;
+                                    }
+                                 }
+                              }
+                           }
+
+                           .cart_item_price {
+                              display: flex;
+                              justify-content: flex-end;
+                              align-items: flex-end;
+
+                              .cart_item_price_inner {
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+
+         .summary {
+            width: 100%;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: 0;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            /* Thêm padding xung quanh bảng để tạo không gian */
+            margin-top: 20px;
+            /* Thêm margin-top để bảng cách các phần tử khác */
+
+            .summary_body {
+               font-family: Arial, sans-serif;
+               color: #333;
+            }
+
+            .summary_row_item,
+            .summary_row_tip,
+            .summary_row_total {
+               border-bottom: 1px solid #ddd;
+               /* Đường viền dưới các dòng */
+            }
+
+            .summary_row_item_title,
+            .summary_row_tip_title,
+            .summary_row_total_title {
+               padding: 12px;
+               font-size: 16px;
+               font-weight: bold;
+               color: #555;
+               text-align: left;
+               /* Căn trái cho tiêu đề */
+            }
+
+            .summary_row_item_price,
+            .summary_row_tip_price,
+            .summary_row_total_price {
+               padding: 12px;
+               text-align: right;
+               /* Canh phải cho giá trị */
+               font-size: 16px;
+               font-weight: bold;
+               color: #333;
+            }
+
+            .summary_total {
+               font-size: 18px;
+               color: #e83c3c;
+            }
+
+            .summary_row_total {
+               border-top: 2px solid #ddd;
+               /* Đường viền trên dòng tổng */
+            }
+
+            .summary_row_item:hover,
+            .summary_row_tip:hover,
+            .summary_row_total:hover {
+               background-color: #f9f9f9;
+               /* Hiệu ứng hover khi rê chuột qua */
+            }
+
+            /* Tạo khoảng cách cho các dòng */
+            .summary_row_item,
+            .summary_row_tip,
+            .summary_row_total {
+               padding-left: 20px;
+               padding-right: 20px;
+               padding-top: 8px;
+               padding-bottom: 8px;
+            }
+
+            .summary_row_total_title {
+               font-size: 18px;
+               /* Đổi kích thước chữ cho dòng "Total" để làm nổi bật */
+               color: #333;
+               /* Màu chữ tổng */
+               font-weight: bold;
+            }
+
+            .summary_total {
+               font-size: 20px;
+               /* Chỉnh sửa kích thước font của tổng */
+               font-weight: bold;
+            }
+         }
+
+         .shopping_continue {
+            width: 420px;
+            margin-left: auto;
+            /* Đẩy phần tử sang bên phải */
+            margin-right: 0;
+            margin-top: 6px;
+            font-size: 18px;
+
+            .shopping_continue_inner {
+               display: flex;
+
+               p {
+                  color: #3f845b;
+
+                  &:hover {
+                     color: #7f036a;
+                     /* Thay đổi màu chữ khi hover */
+                  }
+               }
+            }
+         }
+      }
+
+      .right_content {
+         width: 60%;
+
+         .right_content_inner {
+            margin-top: 100px;
+            padding-left: 40px;
+
+            .right_title {
+               h1 {
+                  color: #45625d;
+                  font-weight: 600;
+                  font-size: 42px;
+               }
+            }
+
+            .right_email {
+               margin-top: 24px;
+
+               .right_email_text {
+                  display: flex;
+
+                  p {
+                     font-weight: 600;
+                     font-size: 16px;
+                  }
+               }
+
+               .email_container {
+                  .email_input {
+                     font-size: 16px;
+                     width: 774px;
+                     height: 48px;
+                     background: #f5f3f3;
+                     border-radius: 9px;
+                     border: 1px solid gray;
+                     padding: 0 14px;
+                  }
+               }
+            }
+
+            .right_checkout_needAgreement {
+               margin-top: 30px;
+               display: flex;
+
+               .right_checkout_button {
+                  .checkout_button {
+                     border: none;
+                     font-weight: 600;
+                     height: 45px;
+                     font-size: 18px;
+                     color: white;
+                     background: #359381;
+                     width: 387px;
+                     border-radius: 9px;
+                     transition: background-color 0.3s ease, transform 0.3s ease;
+
+                     &:hover {
+                        background: #31b098;
+                        transform: scale(1.05);
+                     }
+                  }
+               }
+
+               .right_checkout_needAgreement_text {
+                  display: flex;
+                  margin-left: 12px;
+                  gap: 12px;
+                  margin-top: 10px;
+                  justify-content: center;
+
+                  .fa-lock {
+                     font-size: 20px;
+                     font-family: "Font Awesome 5 Free";
+                     font-weight: 900;
+                     color: #747a71;
+                  }
+
+                  p {
+                     text-align: center;
+                     color: black;
+                  }
+               }
+            }
+
+            .right_next {
+               .next_top {
+                  h3 {
+                     font-size: 16px;
+                  }
+
+                  p {
+                     color: gray;
+                  }
+               }
+
+               .next_bottom {
+                  h3 {
+                     font-size: 16px;
+                  }
+
+                  p {
+                     color: gray;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
