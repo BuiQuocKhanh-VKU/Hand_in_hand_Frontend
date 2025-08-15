@@ -11,6 +11,10 @@ export const adminMenu = [
             name: "menu.admin.manage-user",
             link: "/system/user-manage",
          },
+         {
+            name: "menu.admin.manage-campaign",
+            link: "/system/campaign-manage",
+         },
       ],
    },
 ];
