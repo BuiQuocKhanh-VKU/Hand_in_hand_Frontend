@@ -28,8 +28,17 @@ export const adminMenu = [
             link: "/system/product-manage",
          },
          {
+            name: "menu.admin.manage-cart",
+            link: "/system/cart-manage",
+         },
+         {
             name: "menu.admin.manage-donation",
             link: "/system/donation-manage",
+         },
+
+         {
+            name: "menu.admin.back-to-home",
+            link: "/home",
          },
       ],
    },
