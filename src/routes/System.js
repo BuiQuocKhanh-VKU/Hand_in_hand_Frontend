@@ -8,6 +8,9 @@ import Statistical from "../containers/System/Statistical";
 import UserManage from "../containers/System/UserManage";
 import CampaignManage from "../containers/System/CampaignManage";
 import PartnerManage from "../containers/System/PartnerManage";
+import CampaignDonationManage from "../containers/System/CampaignDonationManage";
+import ProductManage from "../containers/System/Donation/ProductManage";
+
 
 class System extends Component {
    render() {
@@ -34,6 +37,15 @@ class System extends Component {
                         path="/system/partner-manage"
                         component={userIsAdmin(PartnerManage)} // Sử dụng HOC
                      />
+                     <Route
+                        path="/system/campaign-donation-manage"
+                        component={userIsAdmin(CampaignDonationManage)} // Sử dụng HOC
+                     />
+                     <Route
+                        path="/system/product-manage"
+                        component={userIsAdmin(ProductManage)} // Sử dụng HOC
+                     />
+
                      <Route
                         component={() => {
                            return <Redirect to={systemMenuPath} />;
