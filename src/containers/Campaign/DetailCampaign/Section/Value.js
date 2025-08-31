@@ -59,7 +59,9 @@ class Value extends Component {
                <div className="hr" />
                <div className="total-value">
                   <h1>Tổng giá trị</h1>
-                  <p>{<CountUp start={0} end={detailCampaigns.target_amount} duration={3} separator="." />} ₫</p>
+                  <p>
+                     <CountUp start={0} end={Number(detailCampaigns.target_amount) || 0} duration={3} separator="." /> ₫
+                  </p>
                </div>
                <div className="hr" />
             </div>
@@ -68,8 +70,9 @@ class Value extends Component {
                <div className="top-right">
                   <h1>Tiến độ quyên góp</h1>
                   <p>
-                     {<CountUp start={0} end={detailCampaigns.current_amount} duration={3} separator="." />}₫/
-                     {<CountUp start={0} end={detailCampaigns.target_amount} duration={3} separator="." />}₫
+                     <CountUp start={0} end={Number(detailCampaigns.current_amount) || 0} duration={3} separator="." />
+                     ₫/
+                     <CountUp start={0} end={Number(detailCampaigns.target_amount) || 0} duration={3} separator="." />₫
                   </p>
                   <div className="progress">
                      <div
@@ -82,18 +85,20 @@ class Value extends Component {
                   <div className="remain">
                      <h1>Tỷ lệ quyên góp</h1>
                      <p>
-                        <CountUp start={0} end={ratio} duration={3} decimals={2} />%
+                        <CountUp start={0} end={Number(ratio) || 0} duration={3} decimals={2} />%
                      </p>
                   </div>
                   <div className="remain">
                      <h1>Tỷ lệ còn lại</h1>
                      <p>
-                        <CountUp start={0} end={100 - ratio} duration={3} decimals={2} />%
+                        <CountUp start={0} end={100 - (Number(ratio) || 0)} duration={3} decimals={2} />%
                      </p>
                   </div>
                   <div className="remain">
                      <h1>Số ngày còn lại</h1>
-                     <p>{<CountUp start={0} end={remainingDate} duration={3} />} ngày</p>
+                     <p>
+                        <CountUp start={0} end={Number(remainingDate) || 0} duration={3} /> ngày
+                     </p>
                   </div>
                </div>
                <div className="hr" />

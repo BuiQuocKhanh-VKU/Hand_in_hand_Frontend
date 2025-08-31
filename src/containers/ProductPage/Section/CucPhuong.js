@@ -96,12 +96,15 @@ const CucPhuong = (props) => {
       setQuantity(e.target.value);
    };
 
-   const showAlert = (message, type) => {
-      if (alertRef.current) {
-         alertRef.current.showAlert(message, type);
-      }
-   };
-
+ const showAlert = (message, type) => {
+  console.log("[PARENT] showAlert called:", { message, type, hasRef: !!alertRef.current });
+  if (alertRef.current?.showAlert) {
+    alertRef.current.showAlert(message, type);
+  } else {
+    console.warn("[PARENT] alertRef.current null hoặc không có showAlert → dùng fallback");
+    window.alert(`${type?.toUpperCase() || "INFO"}: ${message}`);
+  }
+};
    return (
       <div className="cucPhuong-container" ref={CucPhuongRef}>
          <div className="cucPhuong-content">

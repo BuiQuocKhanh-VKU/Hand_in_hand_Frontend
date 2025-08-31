@@ -21,7 +21,7 @@ const Product = (props) => {
             <div className="find">
                <div className="search">
                   <i className="fas fa-search"></i>
-                  <input type="text" placeholder="Finding product"></input>
+                  <input type="text" placeholder="Tìm sản phẩm"></input>
                </div>
             </div>
             <div className="cart" onClick={() => handleNavigate("/checkout")}>

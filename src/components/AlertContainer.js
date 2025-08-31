@@ -14,10 +14,12 @@ class AlertContainer extends Component {
       const newAlert = { message, type, id: new Date().getTime() };
       this.setState((prevState) => ({
          alerts: [newAlert, ...prevState.alerts],
+         
       }));
       setTimeout(() => {
          this.removeAlert(newAlert.id);
       }, 5000); // Ẩn alert sau 3 giây
+     
    };
 
    removeAlert = (id) => {

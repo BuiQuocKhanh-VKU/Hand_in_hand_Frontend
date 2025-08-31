@@ -3,7 +3,7 @@ import "./CustomAlert.scss";
 const Alert = ({ message, type, onClose }) => {
    return (
       <React.Fragment>
-         <div id="toastBox" className="toast" onClick={onClose}>
+         <div id="toastBox" className="my-toast" onClick={onClose}>
             <div
                className="icon-box"
                style={{
@@ -22,7 +22,7 @@ const Alert = ({ message, type, onClose }) => {
                ) : type === "error" ? (
                   <i className="fa fa-times" aria-hidden="true"></i>
                ) : type === "warning" ? (
-                  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                  <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
                ) : (
                   <i className="fa fa-info" aria-hidden="true"></i>
                )}
