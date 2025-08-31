@@ -24,7 +24,7 @@ const getAllCampaigns = (inputId) => {
 };
 
 const getPartnerByCampaignId = (inputId) => {
-   return axios.get(`/api/get-partners-by-campaign?id=${inputId}`);
+   return axios.get(`/api/get-partner-by-campaign?id=${inputId}`);
 };
 
 export {

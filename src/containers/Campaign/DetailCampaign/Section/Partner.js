@@ -16,20 +16,20 @@ class Partner extends Component {
    }
    async componentDidMount() {
       await this.handleGetPartnerByCampaignId();
-      console.log("id", this.state.id);
    }
+
    handleGetPartnerByCampaignId = async () => {
-      let response = await getPartnerByCampaignId(this.state.id);
-      console.log("thằng && response", response);
-      if (response && response.errCode === 0) {
-         this.setState({
-            arrPartner: response.partners,
-         });
+      const res = await getPartnerByCampaignId(this.state.id);
+      // có interceptor trong axios (k có header) 
+      const data = res?.data ?? res; // <- quan trọng
+      if (data?.errCode === 0) {
+         this.setState({ arrPartner: data.partners ?? [] });
       }
    };
 
    render() {
       let { arrPartner } = this.state;
+      console.log("arrPartner", arrPartner);
       let settings = {
          centerMode: true,
          infinite: true,
@@ -45,7 +45,7 @@ class Partner extends Component {
          <div className="partner-container">
             <div className="partner-title">
                <i class="fa fa-users"></i>
-               Our Partners
+               Tổ chức khác đồng hành:
             </div>
             <div className="partner-content">
                <Slider {...settings}>

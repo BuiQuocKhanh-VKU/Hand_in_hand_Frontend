@@ -35,6 +35,7 @@ class Detail extends Component {
    render() {
       const { isLoggedIn } = this.props;
       let { detailCampaigns } = this.state;
+      console.log(detailCampaigns.position_map);
       return (
          <div className="detail-container">
             <div className="left-content">
